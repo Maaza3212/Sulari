@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "sleep.h": "c",
+        "xil_types.h": "c",
+        "xil_io.h": "c"
+    }
+}
