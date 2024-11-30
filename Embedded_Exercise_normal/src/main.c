@@ -111,8 +111,6 @@ int main()
 
 	    //setup screen
 	    setup();
-		SetPixel(0,0,186,85,211);
-		SetPixel(1,1,255,0,0);
 
 
 	    Xil_ExceptionEnable();
@@ -174,7 +172,7 @@ void TickHandler1(void *CallBackRef){
 	uint32_t StatusEvent;
 
 	//****Write code here ****
-
+	handleGameTick();
 
 
 
@@ -196,9 +194,29 @@ void ButtonHandler(void *CallBackRef, u32 Bank, u32 Status){
 	//Hint: Status==0x01 ->btn0, Status==0x02->btn1, Status==0x04->btn2, Status==0x08-> btn3, Status==0x10->SW0, Status==0x20 -> SW1
 
 	//If true, btn0 was used to trigger interrupt
-	if(Status==0x01){
-
+	if (Status == 0x10) {
+		scoreBoard();
+		// Handle SW0
+	}else if (Status == 0x20) {
+		
+		resetGame();
+	}else if (Status == 0x01) {
+    	rageSwitch();
 	}
+	else if (Status == 0x02) {
+		// Handle btn1
+		moveShipRight();
+	}
+	else if (Status == 0x04) {
+		// Handle btn2
+		createBullet();
+	}
+	else if (Status == 0x08) {
+		// Handle btn3
+		moveShipLeft();
+	}
+	
+	
 
 
 
