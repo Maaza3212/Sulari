@@ -201,7 +201,7 @@ void ButtonHandler(void *CallBackRef, u32 Bank, u32 Status){
 		
 		resetGame();
 	}else if (Status == 0x01) {
-    	rageSwitch();
+    	pause();
 	}
 	else if (Status == 0x02) {
 		// Handle btn1

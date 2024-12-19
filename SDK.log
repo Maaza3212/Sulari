@@ -2596,3 +2596,2778 @@ con
 ----------------End of Script----------------
 
 18:33:50 INFO  : Launch script is exported to file 'C:\Users\MattiTuomela\software\Josuoikea\Sulari\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_embedded_exercise_normal.elf_on_local.tcl'
+18:34:52 INFO  : Disconnected from the channel tcfchan#6.
+18:34:53 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:34:54 INFO  : Jtag cable 'Xilinx PYNQ-Z1 003017A6E375A' is selected.
+18:34:54 INFO  : 'jtag frequency' command is executed.
+18:34:54 INFO  : Sourcing of 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/ps7_init.tcl' is done.
+18:34:54 INFO  : Context for 'APU' is selected.
+18:34:54 INFO  : System reset is completed.
+18:34:57 INFO  : 'after 3000' command is executed.
+18:34:57 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A" && level==0} -index 1' command is executed.
+18:34:59 INFO  : FPGA configured successfully with bitstream "C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/top.bit"
+18:34:59 INFO  : Context for 'APU' is selected.
+18:35:01 INFO  : Hardware design information is loaded from 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/system.hdf'.
+18:35:01 INFO  : 'configparams force-mem-access 1' command is executed.
+18:35:01 INFO  : Context for 'APU' is selected.
+18:35:02 INFO  : 'ps7_init' command is executed.
+18:35:02 INFO  : 'ps7_post_config' command is executed.
+18:35:02 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:35:02 INFO  : The application 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Embedded_Exercise_normal/Debug/Embedded_Exercise_normal.elf' is downloaded to processor 'ps7_cortexa9_0'.
+18:35:02 INFO  : 'configparams force-mem-access 0' command is executed.
+18:35:02 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A" && level==0} -index 1
+fpga -file C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/top.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+loadhw -hw C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+dow C:/Users/MattiTuomela/software/Josuoikea/Sulari/Embedded_Exercise_normal/Debug/Embedded_Exercise_normal.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+18:35:02 INFO  : Memory regions updated for context APU
+18:35:02 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:35:03 INFO  : 'con' command is executed.
+18:35:03 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+con
+----------------End of Script----------------
+
+18:35:03 INFO  : Launch script is exported to file 'C:\Users\MattiTuomela\software\Josuoikea\Sulari\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_embedded_exercise_normal.elf_on_local.tcl'
+18:53:15 INFO  : Disconnected from the channel tcfchan#7.
+18:53:16 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:53:17 INFO  : Jtag cable 'Xilinx PYNQ-Z1 003017A6E375A' is selected.
+18:53:17 INFO  : 'jtag frequency' command is executed.
+18:53:17 INFO  : Sourcing of 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/ps7_init.tcl' is done.
+18:53:17 INFO  : Context for 'APU' is selected.
+18:53:17 INFO  : System reset is completed.
+18:53:20 INFO  : 'after 3000' command is executed.
+18:53:20 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A" && level==0} -index 1' command is executed.
+18:53:22 INFO  : FPGA configured successfully with bitstream "C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/top.bit"
+18:53:22 INFO  : Context for 'APU' is selected.
+18:53:24 INFO  : Hardware design information is loaded from 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/system.hdf'.
+18:53:24 INFO  : 'configparams force-mem-access 1' command is executed.
+18:53:24 INFO  : Context for 'APU' is selected.
+18:53:24 INFO  : 'ps7_init' command is executed.
+18:53:24 INFO  : 'ps7_post_config' command is executed.
+18:53:24 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:53:25 INFO  : The application 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Embedded_Exercise_normal/Debug/Embedded_Exercise_normal.elf' is downloaded to processor 'ps7_cortexa9_0'.
+18:53:25 INFO  : 'configparams force-mem-access 0' command is executed.
+18:53:25 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A" && level==0} -index 1
+fpga -file C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/top.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+loadhw -hw C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+dow C:/Users/MattiTuomela/software/Josuoikea/Sulari/Embedded_Exercise_normal/Debug/Embedded_Exercise_normal.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+18:53:25 INFO  : Memory regions updated for context APU
+18:53:25 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:53:25 INFO  : 'con' command is executed.
+18:53:25 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+con
+----------------End of Script----------------
+
+18:53:25 INFO  : Launch script is exported to file 'C:\Users\MattiTuomela\software\Josuoikea\Sulari\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_embedded_exercise_normal.elf_on_local.tcl'
+18:58:01 INFO  : Disconnected from the channel tcfchan#8.
+18:58:02 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:58:02 INFO  : Jtag cable 'Xilinx PYNQ-Z1 003017A6E375A' is selected.
+18:58:02 INFO  : 'jtag frequency' command is executed.
+18:58:02 INFO  : Sourcing of 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/ps7_init.tcl' is done.
+18:58:02 INFO  : Context for 'APU' is selected.
+18:58:02 INFO  : System reset is completed.
+18:58:05 INFO  : 'after 3000' command is executed.
+18:58:05 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A" && level==0} -index 1' command is executed.
+18:58:07 ERROR : 'fpga -file C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/top.bit' is cancelled.
+18:58:07 INFO  : Issued abort command to xsdb.
+18:58:07 ERROR : Exception occured while running Program FPGA.
+java.lang.RuntimeException: 'fpga -file C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/top.bit' is cancelled.
+18:58:07 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+rst -system
+after 3000
+----------------End of Script----------------
+
+18:58:17 INFO  : ps7_init is completed.
+18:58:17 INFO  : ps7_post_config is completed.
+18:58:17 INFO  : Processor reset is completed for ps7_cortexa9_0
+18:59:40 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+18:59:44 INFO  : Processor reset is completed for ps7_cortexa9_0
+18:59:59 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+19:00:01 INFO  : Processor reset is completed for ps7_cortexa9_0
+19:00:58 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:00:58 INFO  : Jtag cable 'Xilinx PYNQ-Z1 003017A6E375A' is selected.
+19:00:58 INFO  : 'jtag frequency' command is executed.
+19:00:58 INFO  : Sourcing of 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/ps7_init.tcl' is done.
+19:00:58 INFO  : Context for 'APU' is selected.
+19:00:58 INFO  : System reset is completed.
+19:01:01 INFO  : 'after 3000' command is executed.
+19:01:01 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A" && level==0} -index 1' command is executed.
+19:01:04 ERROR : Error occured during Prog B register check
+19:01:04 ERROR : Exception occured while running Program FPGA.
+java.lang.RuntimeException: Error occured during Prog B register check
+19:01:04 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+rst -system
+after 3000
+----------------End of Script----------------
+
+19:02:06 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:02:06 INFO  : Jtag cable 'Xilinx PYNQ-Z1 003017A6E375A' is selected.
+19:02:06 INFO  : 'jtag frequency' command is executed.
+19:02:07 INFO  : Sourcing of 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/ps7_init.tcl' is done.
+19:02:07 INFO  : Context for 'APU' is selected.
+19:02:07 INFO  : System reset is completed.
+19:02:10 INFO  : 'after 3000' command is executed.
+19:02:10 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A" && level==0} -index 1' command is executed.
+19:02:12 ERROR : Error occured during Prog B register check
+19:02:12 ERROR : Exception occured while running Program FPGA.
+java.lang.RuntimeException: Error occured during Prog B register check
+19:02:12 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+rst -system
+after 3000
+----------------End of Script----------------
+
+19:02:39 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:02:39 INFO  : Jtag cable 'Xilinx PYNQ-Z1 003017A6E375A' is selected.
+19:02:39 INFO  : 'jtag frequency' command is executed.
+19:02:39 INFO  : Sourcing of 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/ps7_init.tcl' is done.
+19:02:39 INFO  : Context for 'APU' is selected.
+19:02:39 INFO  : System reset is completed.
+19:02:42 INFO  : 'after 3000' command is executed.
+19:02:42 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A" && level==0} -index 1' command is executed.
+19:02:45 ERROR : Error occured during Prog B register check
+19:02:45 ERROR : Exception occured while running Program FPGA.
+java.lang.RuntimeException: Error occured during Prog B register check
+19:02:45 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+rst -system
+after 3000
+----------------End of Script----------------
+
+19:04:05 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:04:05 INFO  : Jtag cable 'Xilinx PYNQ-Z1 003017A6E375A' is selected.
+19:04:05 INFO  : 'jtag frequency' command is executed.
+19:04:05 INFO  : Sourcing of 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/ps7_init.tcl' is done.
+19:04:05 INFO  : Context for 'APU' is selected.
+19:04:06 INFO  : System reset is completed.
+19:04:09 INFO  : 'after 3000' command is executed.
+19:04:09 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A" && level==0} -index 1' command is executed.
+19:04:11 INFO  : FPGA configured successfully with bitstream "C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/top.bit"
+19:04:11 INFO  : Context for 'APU' is selected.
+19:04:11 INFO  : Hardware design information is loaded from 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/system.hdf'.
+19:04:11 INFO  : 'configparams force-mem-access 1' command is executed.
+19:04:11 INFO  : Context for 'APU' is selected.
+19:04:12 INFO  : 'ps7_init' command is executed.
+19:04:12 INFO  : 'ps7_post_config' command is executed.
+19:04:12 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:04:12 INFO  : The application 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Embedded_Exercise_normal/Debug/Embedded_Exercise_normal.elf' is downloaded to processor 'ps7_cortexa9_0'.
+19:04:12 INFO  : 'configparams force-mem-access 0' command is executed.
+19:04:12 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A" && level==0} -index 1
+fpga -file C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/top.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+loadhw -hw C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+dow C:/Users/MattiTuomela/software/Josuoikea/Sulari/Embedded_Exercise_normal/Debug/Embedded_Exercise_normal.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+19:04:12 INFO  : Memory regions updated for context APU
+19:04:12 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:04:12 INFO  : 'con' command is executed.
+19:04:12 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+con
+----------------End of Script----------------
+
+19:04:12 INFO  : Launch script is exported to file 'C:\Users\MattiTuomela\software\Josuoikea\Sulari\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_embedded_exercise_normal.elf_on_local.tcl'
+19:05:00 INFO  : Disconnected from the channel tcfchan#9.
+19:05:01 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:05:01 INFO  : Jtag cable 'Xilinx PYNQ-Z1 003017A6E375A' is selected.
+19:05:01 INFO  : 'jtag frequency' command is executed.
+19:05:01 INFO  : Sourcing of 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/ps7_init.tcl' is done.
+19:05:01 INFO  : Context for 'APU' is selected.
+19:05:01 INFO  : System reset is completed.
+19:05:04 INFO  : 'after 3000' command is executed.
+19:05:04 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A" && level==0} -index 1' command is executed.
+19:05:07 INFO  : FPGA configured successfully with bitstream "C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/top.bit"
+19:05:07 INFO  : Context for 'APU' is selected.
+19:05:09 INFO  : Hardware design information is loaded from 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/system.hdf'.
+19:05:09 INFO  : 'configparams force-mem-access 1' command is executed.
+19:05:09 INFO  : Context for 'APU' is selected.
+19:05:10 INFO  : 'ps7_init' command is executed.
+19:05:10 INFO  : 'ps7_post_config' command is executed.
+19:05:10 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:05:10 INFO  : The application 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Embedded_Exercise_normal/Debug/Embedded_Exercise_normal.elf' is downloaded to processor 'ps7_cortexa9_0'.
+19:05:10 INFO  : 'configparams force-mem-access 0' command is executed.
+19:05:10 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A" && level==0} -index 1
+fpga -file C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/top.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+loadhw -hw C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+dow C:/Users/MattiTuomela/software/Josuoikea/Sulari/Embedded_Exercise_normal/Debug/Embedded_Exercise_normal.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+19:05:10 INFO  : Memory regions updated for context APU
+19:05:10 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:05:10 INFO  : 'con' command is executed.
+19:05:10 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+con
+----------------End of Script----------------
+
+19:05:10 INFO  : Launch script is exported to file 'C:\Users\MattiTuomela\software\Josuoikea\Sulari\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_embedded_exercise_normal.elf_on_local.tcl'
+19:09:02 INFO  : Disconnected from the channel tcfchan#10.
+19:09:03 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:09:03 INFO  : Jtag cable 'Xilinx PYNQ-Z1 003017A6E375A' is selected.
+19:09:03 INFO  : 'jtag frequency' command is executed.
+19:09:03 INFO  : Sourcing of 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/ps7_init.tcl' is done.
+19:09:03 INFO  : Context for 'APU' is selected.
+19:09:04 INFO  : System reset is completed.
+19:09:07 INFO  : 'after 3000' command is executed.
+19:09:07 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A" && level==0} -index 1' command is executed.
+19:09:09 INFO  : FPGA configured successfully with bitstream "C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/top.bit"
+19:09:09 INFO  : Context for 'APU' is selected.
+19:09:10 INFO  : Hardware design information is loaded from 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/system.hdf'.
+19:09:10 INFO  : 'configparams force-mem-access 1' command is executed.
+19:09:10 INFO  : Context for 'APU' is selected.
+19:09:11 INFO  : 'ps7_init' command is executed.
+19:09:11 INFO  : 'ps7_post_config' command is executed.
+19:09:11 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:09:11 INFO  : The application 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Embedded_Exercise_normal/Debug/Embedded_Exercise_normal.elf' is downloaded to processor 'ps7_cortexa9_0'.
+19:09:11 INFO  : 'configparams force-mem-access 0' command is executed.
+19:09:11 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A" && level==0} -index 1
+fpga -file C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/top.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+loadhw -hw C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+dow C:/Users/MattiTuomela/software/Josuoikea/Sulari/Embedded_Exercise_normal/Debug/Embedded_Exercise_normal.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+19:09:11 INFO  : Memory regions updated for context APU
+19:09:11 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:09:11 INFO  : 'con' command is executed.
+19:09:11 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+con
+----------------End of Script----------------
+
+19:09:11 INFO  : Launch script is exported to file 'C:\Users\MattiTuomela\software\Josuoikea\Sulari\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_embedded_exercise_normal.elf_on_local.tcl'
+19:22:22 INFO  : Disconnected from the channel tcfchan#11.
+19:22:23 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:22:23 INFO  : Jtag cable 'Xilinx PYNQ-Z1 003017A6E375A' is selected.
+19:22:23 INFO  : 'jtag frequency' command is executed.
+19:22:23 INFO  : Sourcing of 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/ps7_init.tcl' is done.
+19:22:23 INFO  : Context for 'APU' is selected.
+19:22:23 INFO  : System reset is completed.
+19:22:26 INFO  : 'after 3000' command is executed.
+19:22:26 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A" && level==0} -index 1' command is executed.
+19:22:29 INFO  : FPGA configured successfully with bitstream "C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/top.bit"
+19:22:29 INFO  : Context for 'APU' is selected.
+19:22:30 INFO  : Hardware design information is loaded from 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/system.hdf'.
+19:22:30 INFO  : 'configparams force-mem-access 1' command is executed.
+19:22:30 INFO  : Context for 'APU' is selected.
+19:22:30 INFO  : 'ps7_init' command is executed.
+19:22:30 INFO  : 'ps7_post_config' command is executed.
+19:22:30 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:22:31 INFO  : The application 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Embedded_Exercise_normal/Debug/Embedded_Exercise_normal.elf' is downloaded to processor 'ps7_cortexa9_0'.
+19:22:31 INFO  : 'configparams force-mem-access 0' command is executed.
+19:22:31 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A" && level==0} -index 1
+fpga -file C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/top.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+loadhw -hw C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+dow C:/Users/MattiTuomela/software/Josuoikea/Sulari/Embedded_Exercise_normal/Debug/Embedded_Exercise_normal.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+19:22:31 INFO  : Memory regions updated for context APU
+19:22:31 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:22:31 INFO  : 'con' command is executed.
+19:22:31 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+con
+----------------End of Script----------------
+
+19:22:31 INFO  : Launch script is exported to file 'C:\Users\MattiTuomela\software\Josuoikea\Sulari\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_embedded_exercise_normal.elf_on_local.tcl'
+19:46:52 INFO  : Disconnected from the channel tcfchan#12.
+19:46:53 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:46:53 INFO  : Jtag cable 'Xilinx PYNQ-Z1 003017A6E375A' is selected.
+19:46:53 INFO  : 'jtag frequency' command is executed.
+19:46:53 INFO  : Sourcing of 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/ps7_init.tcl' is done.
+19:46:53 INFO  : Context for 'APU' is selected.
+19:46:53 INFO  : System reset is completed.
+19:46:56 INFO  : 'after 3000' command is executed.
+19:46:56 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A" && level==0} -index 1' command is executed.
+19:46:58 INFO  : FPGA configured successfully with bitstream "C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/top.bit"
+19:46:58 INFO  : Context for 'APU' is selected.
+19:47:01 INFO  : Hardware design information is loaded from 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/system.hdf'.
+19:47:01 INFO  : 'configparams force-mem-access 1' command is executed.
+19:47:01 INFO  : Context for 'APU' is selected.
+19:47:03 INFO  : 'ps7_init' command is executed.
+19:47:03 INFO  : 'ps7_post_config' command is executed.
+19:47:03 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:47:03 INFO  : The application 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Embedded_Exercise_normal/Debug/Embedded_Exercise_normal.elf' is downloaded to processor 'ps7_cortexa9_0'.
+19:47:03 INFO  : 'configparams force-mem-access 0' command is executed.
+19:47:03 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A" && level==0} -index 1
+fpga -file C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/top.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+loadhw -hw C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+dow C:/Users/MattiTuomela/software/Josuoikea/Sulari/Embedded_Exercise_normal/Debug/Embedded_Exercise_normal.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+19:47:03 INFO  : Memory regions updated for context APU
+19:47:03 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:47:03 INFO  : 'con' command is executed.
+19:47:03 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+con
+----------------End of Script----------------
+
+19:47:03 INFO  : Launch script is exported to file 'C:\Users\MattiTuomela\software\Josuoikea\Sulari\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_embedded_exercise_normal.elf_on_local.tcl'
+19:47:21 INFO  : Disconnected from the channel tcfchan#13.
+19:47:22 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:47:22 INFO  : Jtag cable 'Xilinx PYNQ-Z1 003017A6E375A' is selected.
+19:47:22 INFO  : 'jtag frequency' command is executed.
+19:47:22 INFO  : Sourcing of 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/ps7_init.tcl' is done.
+19:47:22 INFO  : Context for 'APU' is selected.
+19:47:23 INFO  : System reset is completed.
+19:47:26 INFO  : 'after 3000' command is executed.
+19:47:26 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A" && level==0} -index 1' command is executed.
+19:47:28 INFO  : FPGA configured successfully with bitstream "C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/top.bit"
+19:47:28 INFO  : Context for 'APU' is selected.
+19:47:30 INFO  : Hardware design information is loaded from 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/system.hdf'.
+19:47:30 INFO  : 'configparams force-mem-access 1' command is executed.
+19:47:30 INFO  : Context for 'APU' is selected.
+19:47:31 INFO  : 'ps7_init' command is executed.
+19:47:31 INFO  : 'ps7_post_config' command is executed.
+19:47:31 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:47:31 INFO  : The application 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Embedded_Exercise_normal/Debug/Embedded_Exercise_normal.elf' is downloaded to processor 'ps7_cortexa9_0'.
+19:47:31 INFO  : 'configparams force-mem-access 0' command is executed.
+19:47:31 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A" && level==0} -index 1
+fpga -file C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/top.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+loadhw -hw C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+dow C:/Users/MattiTuomela/software/Josuoikea/Sulari/Embedded_Exercise_normal/Debug/Embedded_Exercise_normal.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+19:47:31 INFO  : Memory regions updated for context APU
+19:47:31 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:47:31 INFO  : 'con' command is executed.
+19:47:31 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+con
+----------------End of Script----------------
+
+19:47:31 INFO  : Launch script is exported to file 'C:\Users\MattiTuomela\software\Josuoikea\Sulari\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_embedded_exercise_normal.elf_on_local.tcl'
+19:48:45 INFO  : Disconnected from the channel tcfchan#14.
+19:48:46 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:48:46 INFO  : Jtag cable 'Xilinx PYNQ-Z1 003017A6E375A' is selected.
+19:48:46 INFO  : 'jtag frequency' command is executed.
+19:48:46 INFO  : Sourcing of 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/ps7_init.tcl' is done.
+19:48:46 INFO  : Context for 'APU' is selected.
+19:48:46 INFO  : System reset is completed.
+19:48:49 INFO  : 'after 3000' command is executed.
+19:48:49 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A" && level==0} -index 1' command is executed.
+19:48:52 INFO  : FPGA configured successfully with bitstream "C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/top.bit"
+19:48:52 INFO  : Context for 'APU' is selected.
+19:48:53 INFO  : Hardware design information is loaded from 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/system.hdf'.
+19:48:53 INFO  : 'configparams force-mem-access 1' command is executed.
+19:48:53 INFO  : Context for 'APU' is selected.
+19:48:54 INFO  : 'ps7_init' command is executed.
+19:48:54 INFO  : 'ps7_post_config' command is executed.
+19:48:54 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:48:54 INFO  : The application 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Embedded_Exercise_normal/Debug/Embedded_Exercise_normal.elf' is downloaded to processor 'ps7_cortexa9_0'.
+19:48:54 INFO  : 'configparams force-mem-access 0' command is executed.
+19:48:54 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A" && level==0} -index 1
+fpga -file C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/top.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+loadhw -hw C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+dow C:/Users/MattiTuomela/software/Josuoikea/Sulari/Embedded_Exercise_normal/Debug/Embedded_Exercise_normal.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+19:48:54 INFO  : Memory regions updated for context APU
+19:48:54 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:48:54 INFO  : 'con' command is executed.
+19:48:54 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+con
+----------------End of Script----------------
+
+19:48:54 INFO  : Launch script is exported to file 'C:\Users\MattiTuomela\software\Josuoikea\Sulari\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_embedded_exercise_normal.elf_on_local.tcl'
+19:49:43 INFO  : Disconnected from the channel tcfchan#15.
+19:49:44 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:49:44 INFO  : Jtag cable 'Xilinx PYNQ-Z1 003017A6E375A' is selected.
+19:49:44 INFO  : 'jtag frequency' command is executed.
+19:49:44 INFO  : Sourcing of 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/ps7_init.tcl' is done.
+19:49:44 INFO  : Context for 'APU' is selected.
+19:49:44 INFO  : System reset is completed.
+19:49:47 INFO  : 'after 3000' command is executed.
+19:49:47 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A" && level==0} -index 1' command is executed.
+19:49:50 INFO  : FPGA configured successfully with bitstream "C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/top.bit"
+19:49:50 INFO  : Context for 'APU' is selected.
+19:49:51 INFO  : Hardware design information is loaded from 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/system.hdf'.
+19:49:51 INFO  : 'configparams force-mem-access 1' command is executed.
+19:49:51 INFO  : Context for 'APU' is selected.
+19:49:52 INFO  : 'ps7_init' command is executed.
+19:49:52 INFO  : 'ps7_post_config' command is executed.
+19:49:52 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:49:53 INFO  : The application 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Embedded_Exercise_normal/Debug/Embedded_Exercise_normal.elf' is downloaded to processor 'ps7_cortexa9_0'.
+19:49:53 INFO  : 'configparams force-mem-access 0' command is executed.
+19:49:53 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A" && level==0} -index 1
+fpga -file C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/top.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+loadhw -hw C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+dow C:/Users/MattiTuomela/software/Josuoikea/Sulari/Embedded_Exercise_normal/Debug/Embedded_Exercise_normal.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+19:49:53 INFO  : Memory regions updated for context APU
+19:49:53 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:49:53 INFO  : 'con' command is executed.
+19:49:53 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+con
+----------------End of Script----------------
+
+19:49:53 INFO  : Launch script is exported to file 'C:\Users\MattiTuomela\software\Josuoikea\Sulari\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_embedded_exercise_normal.elf_on_local.tcl'
+19:56:41 INFO  : Disconnected from the channel tcfchan#16.
+19:56:42 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:56:42 INFO  : Jtag cable 'Xilinx PYNQ-Z1 003017A6E375A' is selected.
+19:56:42 INFO  : 'jtag frequency' command is executed.
+19:56:42 INFO  : Sourcing of 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/ps7_init.tcl' is done.
+19:56:42 INFO  : Context for 'APU' is selected.
+19:56:42 INFO  : System reset is completed.
+19:56:45 INFO  : 'after 3000' command is executed.
+19:56:45 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A" && level==0} -index 1' command is executed.
+19:56:48 INFO  : FPGA configured successfully with bitstream "C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/top.bit"
+19:56:48 INFO  : Context for 'APU' is selected.
+19:56:50 INFO  : Hardware design information is loaded from 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/system.hdf'.
+19:56:50 INFO  : 'configparams force-mem-access 1' command is executed.
+19:56:50 INFO  : Context for 'APU' is selected.
+19:56:50 INFO  : 'ps7_init' command is executed.
+19:56:50 INFO  : 'ps7_post_config' command is executed.
+19:56:50 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:56:50 INFO  : The application 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Embedded_Exercise_normal/Debug/Embedded_Exercise_normal.elf' is downloaded to processor 'ps7_cortexa9_0'.
+19:56:50 INFO  : 'configparams force-mem-access 0' command is executed.
+19:56:50 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A" && level==0} -index 1
+fpga -file C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/top.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+loadhw -hw C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+dow C:/Users/MattiTuomela/software/Josuoikea/Sulari/Embedded_Exercise_normal/Debug/Embedded_Exercise_normal.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+19:56:50 INFO  : Memory regions updated for context APU
+19:56:51 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:56:51 INFO  : 'con' command is executed.
+19:56:51 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+con
+----------------End of Script----------------
+
+19:56:51 INFO  : Launch script is exported to file 'C:\Users\MattiTuomela\software\Josuoikea\Sulari\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_embedded_exercise_normal.elf_on_local.tcl'
+19:57:19 INFO  : Disconnected from the channel tcfchan#17.
+19:57:20 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:57:20 INFO  : Jtag cable 'Xilinx PYNQ-Z1 003017A6E375A' is selected.
+19:57:20 INFO  : 'jtag frequency' command is executed.
+19:57:20 INFO  : Sourcing of 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/ps7_init.tcl' is done.
+19:57:20 INFO  : Context for 'APU' is selected.
+19:57:20 INFO  : System reset is completed.
+19:57:23 INFO  : 'after 3000' command is executed.
+19:57:23 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A" && level==0} -index 1' command is executed.
+19:57:25 INFO  : FPGA configured successfully with bitstream "C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/top.bit"
+19:57:25 INFO  : Context for 'APU' is selected.
+19:57:27 INFO  : Hardware design information is loaded from 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/system.hdf'.
+19:57:27 INFO  : 'configparams force-mem-access 1' command is executed.
+19:57:27 INFO  : Context for 'APU' is selected.
+19:57:28 INFO  : 'ps7_init' command is executed.
+19:57:28 INFO  : 'ps7_post_config' command is executed.
+19:57:28 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:57:28 INFO  : The application 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Embedded_Exercise_normal/Debug/Embedded_Exercise_normal.elf' is downloaded to processor 'ps7_cortexa9_0'.
+19:57:28 INFO  : 'configparams force-mem-access 0' command is executed.
+19:57:28 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A" && level==0} -index 1
+fpga -file C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/top.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+loadhw -hw C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+dow C:/Users/MattiTuomela/software/Josuoikea/Sulari/Embedded_Exercise_normal/Debug/Embedded_Exercise_normal.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+19:57:28 INFO  : Memory regions updated for context APU
+19:57:28 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:57:28 INFO  : 'con' command is executed.
+19:57:28 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+con
+----------------End of Script----------------
+
+19:57:28 INFO  : Launch script is exported to file 'C:\Users\MattiTuomela\software\Josuoikea\Sulari\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_embedded_exercise_normal.elf_on_local.tcl'
+20:08:19 INFO  : Disconnected from the channel tcfchan#18.
+20:08:20 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:08:20 INFO  : Jtag cable 'Xilinx PYNQ-Z1 003017A6E375A' is selected.
+20:08:20 INFO  : 'jtag frequency' command is executed.
+20:08:20 INFO  : Sourcing of 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/ps7_init.tcl' is done.
+20:08:20 INFO  : Context for 'APU' is selected.
+20:08:21 INFO  : System reset is completed.
+20:08:24 INFO  : 'after 3000' command is executed.
+20:08:24 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A" && level==0} -index 1' command is executed.
+20:08:26 INFO  : FPGA configured successfully with bitstream "C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/top.bit"
+20:08:26 INFO  : Context for 'APU' is selected.
+20:08:27 INFO  : Hardware design information is loaded from 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/system.hdf'.
+20:08:27 INFO  : 'configparams force-mem-access 1' command is executed.
+20:08:27 INFO  : Context for 'APU' is selected.
+20:08:28 INFO  : 'ps7_init' command is executed.
+20:08:28 INFO  : 'ps7_post_config' command is executed.
+20:08:28 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:08:28 INFO  : The application 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Embedded_Exercise_normal/Debug/Embedded_Exercise_normal.elf' is downloaded to processor 'ps7_cortexa9_0'.
+20:08:28 INFO  : 'configparams force-mem-access 0' command is executed.
+20:08:28 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A" && level==0} -index 1
+fpga -file C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/top.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+loadhw -hw C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+dow C:/Users/MattiTuomela/software/Josuoikea/Sulari/Embedded_Exercise_normal/Debug/Embedded_Exercise_normal.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+20:08:28 INFO  : Memory regions updated for context APU
+20:08:28 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:08:28 INFO  : 'con' command is executed.
+20:08:28 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+con
+----------------End of Script----------------
+
+20:08:28 INFO  : Launch script is exported to file 'C:\Users\MattiTuomela\software\Josuoikea\Sulari\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_embedded_exercise_normal.elf_on_local.tcl'
+20:09:30 INFO  : Disconnected from the channel tcfchan#19.
+20:09:31 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:09:32 INFO  : Jtag cable 'Xilinx PYNQ-Z1 003017A6E375A' is selected.
+20:09:32 INFO  : 'jtag frequency' command is executed.
+20:09:32 INFO  : Sourcing of 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/ps7_init.tcl' is done.
+20:09:32 INFO  : Context for 'APU' is selected.
+20:09:32 INFO  : System reset is completed.
+20:09:35 INFO  : 'after 3000' command is executed.
+20:09:35 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A" && level==0} -index 1' command is executed.
+20:09:37 INFO  : FPGA configured successfully with bitstream "C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/top.bit"
+20:09:37 INFO  : Context for 'APU' is selected.
+20:09:39 INFO  : Hardware design information is loaded from 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/system.hdf'.
+20:09:39 INFO  : 'configparams force-mem-access 1' command is executed.
+20:09:39 INFO  : Context for 'APU' is selected.
+20:09:39 INFO  : 'ps7_init' command is executed.
+20:09:39 INFO  : 'ps7_post_config' command is executed.
+20:09:39 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:09:39 INFO  : The application 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Embedded_Exercise_normal/Debug/Embedded_Exercise_normal.elf' is downloaded to processor 'ps7_cortexa9_0'.
+20:09:39 INFO  : 'configparams force-mem-access 0' command is executed.
+20:09:39 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A" && level==0} -index 1
+fpga -file C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/top.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+loadhw -hw C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+dow C:/Users/MattiTuomela/software/Josuoikea/Sulari/Embedded_Exercise_normal/Debug/Embedded_Exercise_normal.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+20:09:39 INFO  : Memory regions updated for context APU
+20:09:40 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:09:40 INFO  : 'con' command is executed.
+20:09:40 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+con
+----------------End of Script----------------
+
+20:09:40 INFO  : Launch script is exported to file 'C:\Users\MattiTuomela\software\Josuoikea\Sulari\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_embedded_exercise_normal.elf_on_local.tcl'
+20:11:26 INFO  : Disconnected from the channel tcfchan#20.
+20:11:27 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:11:28 INFO  : Jtag cable 'Xilinx PYNQ-Z1 003017A6E375A' is selected.
+20:11:28 INFO  : 'jtag frequency' command is executed.
+20:11:28 INFO  : Sourcing of 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/ps7_init.tcl' is done.
+20:11:28 INFO  : Context for 'APU' is selected.
+20:11:28 INFO  : System reset is completed.
+20:11:31 INFO  : 'after 3000' command is executed.
+20:11:31 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A" && level==0} -index 1' command is executed.
+20:11:33 INFO  : FPGA configured successfully with bitstream "C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/top.bit"
+20:11:33 INFO  : Context for 'APU' is selected.
+20:11:35 INFO  : Hardware design information is loaded from 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/system.hdf'.
+20:11:35 INFO  : 'configparams force-mem-access 1' command is executed.
+20:11:35 INFO  : Context for 'APU' is selected.
+20:11:35 INFO  : 'ps7_init' command is executed.
+20:11:36 INFO  : 'ps7_post_config' command is executed.
+20:11:36 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:11:36 INFO  : The application 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Embedded_Exercise_normal/Debug/Embedded_Exercise_normal.elf' is downloaded to processor 'ps7_cortexa9_0'.
+20:11:36 INFO  : 'configparams force-mem-access 0' command is executed.
+20:11:36 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A" && level==0} -index 1
+fpga -file C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/top.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+loadhw -hw C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+dow C:/Users/MattiTuomela/software/Josuoikea/Sulari/Embedded_Exercise_normal/Debug/Embedded_Exercise_normal.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+20:11:36 INFO  : Memory regions updated for context APU
+20:11:36 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:11:36 INFO  : 'con' command is executed.
+20:11:36 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+con
+----------------End of Script----------------
+
+20:11:36 INFO  : Launch script is exported to file 'C:\Users\MattiTuomela\software\Josuoikea\Sulari\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_embedded_exercise_normal.elf_on_local.tcl'
+20:12:39 INFO  : Disconnected from the channel tcfchan#21.
+20:12:40 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:12:40 INFO  : Jtag cable 'Xilinx PYNQ-Z1 003017A6E375A' is selected.
+20:12:40 INFO  : 'jtag frequency' command is executed.
+20:12:40 INFO  : Sourcing of 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/ps7_init.tcl' is done.
+20:12:40 INFO  : Context for 'APU' is selected.
+20:12:40 INFO  : System reset is completed.
+20:12:43 INFO  : 'after 3000' command is executed.
+20:12:44 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A" && level==0} -index 1' command is executed.
+20:12:46 INFO  : FPGA configured successfully with bitstream "C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/top.bit"
+20:12:46 INFO  : Context for 'APU' is selected.
+20:12:47 INFO  : Hardware design information is loaded from 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/system.hdf'.
+20:12:47 INFO  : 'configparams force-mem-access 1' command is executed.
+20:12:47 INFO  : Context for 'APU' is selected.
+20:12:48 INFO  : 'ps7_init' command is executed.
+20:12:48 INFO  : 'ps7_post_config' command is executed.
+20:12:48 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:12:48 INFO  : The application 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Embedded_Exercise_normal/Debug/Embedded_Exercise_normal.elf' is downloaded to processor 'ps7_cortexa9_0'.
+20:12:48 INFO  : 'configparams force-mem-access 0' command is executed.
+20:12:48 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A" && level==0} -index 1
+fpga -file C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/top.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+loadhw -hw C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+dow C:/Users/MattiTuomela/software/Josuoikea/Sulari/Embedded_Exercise_normal/Debug/Embedded_Exercise_normal.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+20:12:48 INFO  : Memory regions updated for context APU
+20:12:48 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:12:48 INFO  : 'con' command is executed.
+20:12:48 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+con
+----------------End of Script----------------
+
+20:12:48 INFO  : Launch script is exported to file 'C:\Users\MattiTuomela\software\Josuoikea\Sulari\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_embedded_exercise_normal.elf_on_local.tcl'
+20:32:23 INFO  : Disconnected from the channel tcfchan#22.
+20:32:24 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:32:25 INFO  : Jtag cable 'Xilinx PYNQ-Z1 003017A6E375A' is selected.
+20:32:25 INFO  : 'jtag frequency' command is executed.
+20:32:25 INFO  : Sourcing of 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/ps7_init.tcl' is done.
+20:32:25 INFO  : Context for 'APU' is selected.
+20:32:25 INFO  : System reset is completed.
+20:32:28 INFO  : 'after 3000' command is executed.
+20:32:28 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A" && level==0} -index 1' command is executed.
+20:32:30 INFO  : FPGA configured successfully with bitstream "C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/top.bit"
+20:32:30 INFO  : Context for 'APU' is selected.
+20:32:32 INFO  : Hardware design information is loaded from 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/system.hdf'.
+20:32:32 INFO  : 'configparams force-mem-access 1' command is executed.
+20:32:32 INFO  : Context for 'APU' is selected.
+20:32:32 INFO  : 'ps7_init' command is executed.
+20:32:32 INFO  : 'ps7_post_config' command is executed.
+20:32:32 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:32:32 INFO  : The application 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Embedded_Exercise_normal/Debug/Embedded_Exercise_normal.elf' is downloaded to processor 'ps7_cortexa9_0'.
+20:32:32 INFO  : 'configparams force-mem-access 0' command is executed.
+20:32:32 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A" && level==0} -index 1
+fpga -file C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/top.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+loadhw -hw C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+dow C:/Users/MattiTuomela/software/Josuoikea/Sulari/Embedded_Exercise_normal/Debug/Embedded_Exercise_normal.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+20:32:32 INFO  : Memory regions updated for context APU
+20:32:32 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:32:33 INFO  : 'con' command is executed.
+20:32:33 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+con
+----------------End of Script----------------
+
+20:32:33 INFO  : Launch script is exported to file 'C:\Users\MattiTuomela\software\Josuoikea\Sulari\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_embedded_exercise_normal.elf_on_local.tcl'
+20:44:26 INFO  : Disconnected from the channel tcfchan#23.
+20:44:27 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:44:27 INFO  : Jtag cable 'Xilinx PYNQ-Z1 003017A6E375A' is selected.
+20:44:27 INFO  : 'jtag frequency' command is executed.
+20:44:27 INFO  : Sourcing of 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/ps7_init.tcl' is done.
+20:44:27 INFO  : Context for 'APU' is selected.
+20:44:27 INFO  : System reset is completed.
+20:44:30 INFO  : 'after 3000' command is executed.
+20:44:30 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A" && level==0} -index 1' command is executed.
+20:44:32 INFO  : FPGA configured successfully with bitstream "C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/top.bit"
+20:44:32 INFO  : Context for 'APU' is selected.
+20:44:34 INFO  : Hardware design information is loaded from 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/system.hdf'.
+20:44:34 INFO  : 'configparams force-mem-access 1' command is executed.
+20:44:34 INFO  : Context for 'APU' is selected.
+20:44:34 INFO  : 'ps7_init' command is executed.
+20:44:35 INFO  : 'ps7_post_config' command is executed.
+20:44:35 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:44:35 INFO  : The application 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Embedded_Exercise_normal/Debug/Embedded_Exercise_normal.elf' is downloaded to processor 'ps7_cortexa9_0'.
+20:44:35 INFO  : 'configparams force-mem-access 0' command is executed.
+20:44:35 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A" && level==0} -index 1
+fpga -file C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/top.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+loadhw -hw C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+dow C:/Users/MattiTuomela/software/Josuoikea/Sulari/Embedded_Exercise_normal/Debug/Embedded_Exercise_normal.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+20:44:35 INFO  : Memory regions updated for context APU
+20:44:35 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:44:35 INFO  : 'con' command is executed.
+20:44:35 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+con
+----------------End of Script----------------
+
+20:44:35 INFO  : Launch script is exported to file 'C:\Users\MattiTuomela\software\Josuoikea\Sulari\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_embedded_exercise_normal.elf_on_local.tcl'
+20:47:15 INFO  : Disconnected from the channel tcfchan#24.
+20:47:16 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:47:16 INFO  : Jtag cable 'Xilinx PYNQ-Z1 003017A6E375A' is selected.
+20:47:16 INFO  : 'jtag frequency' command is executed.
+20:47:16 INFO  : Sourcing of 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/ps7_init.tcl' is done.
+20:47:16 INFO  : Context for 'APU' is selected.
+20:47:16 INFO  : System reset is completed.
+20:47:19 INFO  : 'after 3000' command is executed.
+20:47:19 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A" && level==0} -index 1' command is executed.
+20:47:21 INFO  : FPGA configured successfully with bitstream "C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/top.bit"
+20:47:22 INFO  : Context for 'APU' is selected.
+20:47:24 INFO  : Hardware design information is loaded from 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/system.hdf'.
+20:47:24 INFO  : 'configparams force-mem-access 1' command is executed.
+20:47:24 INFO  : Context for 'APU' is selected.
+20:47:24 INFO  : 'ps7_init' command is executed.
+20:47:24 INFO  : 'ps7_post_config' command is executed.
+20:47:24 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:47:24 INFO  : The application 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Embedded_Exercise_normal/Debug/Embedded_Exercise_normal.elf' is downloaded to processor 'ps7_cortexa9_0'.
+20:47:24 INFO  : 'configparams force-mem-access 0' command is executed.
+20:47:24 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A" && level==0} -index 1
+fpga -file C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/top.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+loadhw -hw C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+dow C:/Users/MattiTuomela/software/Josuoikea/Sulari/Embedded_Exercise_normal/Debug/Embedded_Exercise_normal.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+20:47:24 INFO  : Memory regions updated for context APU
+20:47:25 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:47:25 INFO  : 'con' command is executed.
+20:47:25 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+con
+----------------End of Script----------------
+
+20:47:25 INFO  : Launch script is exported to file 'C:\Users\MattiTuomela\software\Josuoikea\Sulari\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_embedded_exercise_normal.elf_on_local.tcl'
+20:48:31 INFO  : Disconnected from the channel tcfchan#25.
+20:48:32 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:48:32 INFO  : Jtag cable 'Xilinx PYNQ-Z1 003017A6E375A' is selected.
+20:48:32 INFO  : 'jtag frequency' command is executed.
+20:48:32 INFO  : Sourcing of 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/ps7_init.tcl' is done.
+20:48:32 INFO  : Context for 'APU' is selected.
+20:48:32 INFO  : System reset is completed.
+20:48:35 INFO  : 'after 3000' command is executed.
+20:48:35 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A" && level==0} -index 1' command is executed.
+20:48:38 INFO  : FPGA configured successfully with bitstream "C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/top.bit"
+20:48:38 INFO  : Context for 'APU' is selected.
+20:48:39 INFO  : Hardware design information is loaded from 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/system.hdf'.
+20:48:39 INFO  : 'configparams force-mem-access 1' command is executed.
+20:48:39 INFO  : Context for 'APU' is selected.
+20:48:40 INFO  : 'ps7_init' command is executed.
+20:48:40 INFO  : 'ps7_post_config' command is executed.
+20:48:40 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:48:40 INFO  : The application 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Embedded_Exercise_normal/Debug/Embedded_Exercise_normal.elf' is downloaded to processor 'ps7_cortexa9_0'.
+20:48:40 INFO  : 'configparams force-mem-access 0' command is executed.
+20:48:40 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A" && level==0} -index 1
+fpga -file C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/top.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+loadhw -hw C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+dow C:/Users/MattiTuomela/software/Josuoikea/Sulari/Embedded_Exercise_normal/Debug/Embedded_Exercise_normal.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+20:48:40 INFO  : Memory regions updated for context APU
+20:48:40 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:48:40 INFO  : 'con' command is executed.
+20:48:40 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+con
+----------------End of Script----------------
+
+20:48:40 INFO  : Launch script is exported to file 'C:\Users\MattiTuomela\software\Josuoikea\Sulari\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_embedded_exercise_normal.elf_on_local.tcl'
+21:09:41 INFO  : Disconnected from the channel tcfchan#26.
+21:09:42 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:09:42 INFO  : Jtag cable 'Xilinx PYNQ-Z1 003017A6E375A' is selected.
+21:09:42 INFO  : 'jtag frequency' command is executed.
+21:09:42 INFO  : Sourcing of 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/ps7_init.tcl' is done.
+21:09:42 INFO  : Context for 'APU' is selected.
+21:09:42 INFO  : System reset is completed.
+21:09:45 INFO  : 'after 3000' command is executed.
+21:09:45 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A" && level==0} -index 1' command is executed.
+21:09:47 INFO  : FPGA configured successfully with bitstream "C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/top.bit"
+21:09:47 INFO  : Context for 'APU' is selected.
+21:09:49 INFO  : Hardware design information is loaded from 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/system.hdf'.
+21:09:49 INFO  : 'configparams force-mem-access 1' command is executed.
+21:09:49 INFO  : Context for 'APU' is selected.
+21:09:50 INFO  : 'ps7_init' command is executed.
+21:09:50 INFO  : 'ps7_post_config' command is executed.
+21:09:50 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:09:50 INFO  : The application 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Embedded_Exercise_normal/Debug/Embedded_Exercise_normal.elf' is downloaded to processor 'ps7_cortexa9_0'.
+21:09:50 INFO  : 'configparams force-mem-access 0' command is executed.
+21:09:50 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A" && level==0} -index 1
+fpga -file C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/top.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+loadhw -hw C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+dow C:/Users/MattiTuomela/software/Josuoikea/Sulari/Embedded_Exercise_normal/Debug/Embedded_Exercise_normal.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+21:09:50 INFO  : Memory regions updated for context APU
+21:09:50 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:09:50 INFO  : 'con' command is executed.
+21:09:50 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+con
+----------------End of Script----------------
+
+21:09:50 INFO  : Launch script is exported to file 'C:\Users\MattiTuomela\software\Josuoikea\Sulari\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_embedded_exercise_normal.elf_on_local.tcl'
+21:10:06 INFO  : Disconnected from the channel tcfchan#27.
+21:10:08 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:10:08 INFO  : Jtag cable 'Xilinx PYNQ-Z1 003017A6E375A' is selected.
+21:10:08 INFO  : 'jtag frequency' command is executed.
+21:10:08 INFO  : Sourcing of 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/ps7_init.tcl' is done.
+21:10:08 INFO  : Context for 'APU' is selected.
+21:10:08 INFO  : System reset is completed.
+21:10:11 INFO  : 'after 3000' command is executed.
+21:10:11 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A" && level==0} -index 1' command is executed.
+21:10:13 INFO  : FPGA configured successfully with bitstream "C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/top.bit"
+21:10:13 INFO  : Context for 'APU' is selected.
+21:10:15 INFO  : Hardware design information is loaded from 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/system.hdf'.
+21:10:15 INFO  : 'configparams force-mem-access 1' command is executed.
+21:10:15 INFO  : Context for 'APU' is selected.
+21:10:16 INFO  : 'ps7_init' command is executed.
+21:10:16 INFO  : 'ps7_post_config' command is executed.
+21:10:16 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:10:16 INFO  : The application 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Embedded_Exercise_normal/Debug/Embedded_Exercise_normal.elf' is downloaded to processor 'ps7_cortexa9_0'.
+21:10:16 INFO  : 'configparams force-mem-access 0' command is executed.
+21:10:16 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A" && level==0} -index 1
+fpga -file C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/top.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+loadhw -hw C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+dow C:/Users/MattiTuomela/software/Josuoikea/Sulari/Embedded_Exercise_normal/Debug/Embedded_Exercise_normal.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+21:10:16 INFO  : Memory regions updated for context APU
+21:10:16 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:10:16 INFO  : 'con' command is executed.
+21:10:16 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+con
+----------------End of Script----------------
+
+21:10:16 INFO  : Launch script is exported to file 'C:\Users\MattiTuomela\software\Josuoikea\Sulari\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_embedded_exercise_normal.elf_on_local.tcl'
+21:10:32 INFO  : Disconnected from the channel tcfchan#28.
+21:10:33 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:10:33 INFO  : Jtag cable 'Xilinx PYNQ-Z1 003017A6E375A' is selected.
+21:10:33 INFO  : 'jtag frequency' command is executed.
+21:10:33 INFO  : Sourcing of 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/ps7_init.tcl' is done.
+21:10:33 INFO  : Context for 'APU' is selected.
+21:10:34 INFO  : System reset is completed.
+21:10:37 INFO  : 'after 3000' command is executed.
+21:10:37 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A" && level==0} -index 1' command is executed.
+21:10:39 INFO  : FPGA configured successfully with bitstream "C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/top.bit"
+21:10:39 INFO  : Context for 'APU' is selected.
+21:10:41 INFO  : Hardware design information is loaded from 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/system.hdf'.
+21:10:41 INFO  : 'configparams force-mem-access 1' command is executed.
+21:10:41 INFO  : Context for 'APU' is selected.
+21:10:41 INFO  : 'ps7_init' command is executed.
+21:10:41 INFO  : 'ps7_post_config' command is executed.
+21:10:41 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:10:41 INFO  : The application 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Embedded_Exercise_normal/Debug/Embedded_Exercise_normal.elf' is downloaded to processor 'ps7_cortexa9_0'.
+21:10:41 INFO  : 'configparams force-mem-access 0' command is executed.
+21:10:41 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A" && level==0} -index 1
+fpga -file C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/top.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+loadhw -hw C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+dow C:/Users/MattiTuomela/software/Josuoikea/Sulari/Embedded_Exercise_normal/Debug/Embedded_Exercise_normal.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+21:10:41 INFO  : Memory regions updated for context APU
+21:10:42 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:10:42 INFO  : 'con' command is executed.
+21:10:42 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+con
+----------------End of Script----------------
+
+21:10:42 INFO  : Launch script is exported to file 'C:\Users\MattiTuomela\software\Josuoikea\Sulari\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_embedded_exercise_normal.elf_on_local.tcl'
+21:13:20 INFO  : Disconnected from the channel tcfchan#29.
+21:13:21 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:13:21 INFO  : Jtag cable 'Xilinx PYNQ-Z1 003017A6E375A' is selected.
+21:13:21 INFO  : 'jtag frequency' command is executed.
+21:13:21 INFO  : Sourcing of 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/ps7_init.tcl' is done.
+21:13:21 INFO  : Context for 'APU' is selected.
+21:13:22 INFO  : System reset is completed.
+21:13:25 INFO  : 'after 3000' command is executed.
+21:13:25 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A" && level==0} -index 1' command is executed.
+21:13:27 INFO  : FPGA configured successfully with bitstream "C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/top.bit"
+21:13:27 INFO  : Context for 'APU' is selected.
+21:13:29 INFO  : Hardware design information is loaded from 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/system.hdf'.
+21:13:29 INFO  : 'configparams force-mem-access 1' command is executed.
+21:13:29 INFO  : Context for 'APU' is selected.
+21:13:30 INFO  : 'ps7_init' command is executed.
+21:13:30 INFO  : 'ps7_post_config' command is executed.
+21:13:30 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:13:30 INFO  : The application 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Embedded_Exercise_normal/Debug/Embedded_Exercise_normal.elf' is downloaded to processor 'ps7_cortexa9_0'.
+21:13:30 INFO  : 'configparams force-mem-access 0' command is executed.
+21:13:30 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A" && level==0} -index 1
+fpga -file C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/top.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+loadhw -hw C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+dow C:/Users/MattiTuomela/software/Josuoikea/Sulari/Embedded_Exercise_normal/Debug/Embedded_Exercise_normal.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+21:13:30 INFO  : Memory regions updated for context APU
+21:13:30 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:13:30 INFO  : 'con' command is executed.
+21:13:30 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+con
+----------------End of Script----------------
+
+21:13:30 INFO  : Launch script is exported to file 'C:\Users\MattiTuomela\software\Josuoikea\Sulari\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_embedded_exercise_normal.elf_on_local.tcl'
+21:14:29 INFO  : Disconnected from the channel tcfchan#30.
+21:14:30 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:14:30 INFO  : Jtag cable 'Xilinx PYNQ-Z1 003017A6E375A' is selected.
+21:14:30 INFO  : 'jtag frequency' command is executed.
+21:14:30 INFO  : Sourcing of 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/ps7_init.tcl' is done.
+21:14:30 INFO  : Context for 'APU' is selected.
+21:14:30 INFO  : System reset is completed.
+21:14:33 INFO  : 'after 3000' command is executed.
+21:14:33 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A" && level==0} -index 1' command is executed.
+21:14:36 INFO  : FPGA configured successfully with bitstream "C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/top.bit"
+21:14:36 INFO  : Context for 'APU' is selected.
+21:14:37 INFO  : Hardware design information is loaded from 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/system.hdf'.
+21:14:37 INFO  : 'configparams force-mem-access 1' command is executed.
+21:14:37 INFO  : Context for 'APU' is selected.
+21:14:38 INFO  : 'ps7_init' command is executed.
+21:14:38 INFO  : 'ps7_post_config' command is executed.
+21:14:38 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:14:38 INFO  : The application 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Embedded_Exercise_normal/Debug/Embedded_Exercise_normal.elf' is downloaded to processor 'ps7_cortexa9_0'.
+21:14:38 INFO  : 'configparams force-mem-access 0' command is executed.
+21:14:38 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A" && level==0} -index 1
+fpga -file C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/top.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+loadhw -hw C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+dow C:/Users/MattiTuomela/software/Josuoikea/Sulari/Embedded_Exercise_normal/Debug/Embedded_Exercise_normal.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+21:14:38 INFO  : Memory regions updated for context APU
+21:14:38 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:14:39 INFO  : 'con' command is executed.
+21:14:39 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+con
+----------------End of Script----------------
+
+21:14:39 INFO  : Launch script is exported to file 'C:\Users\MattiTuomela\software\Josuoikea\Sulari\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_embedded_exercise_normal.elf_on_local.tcl'
+21:17:10 INFO  : Disconnected from the channel tcfchan#31.
+21:17:11 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:17:12 INFO  : Jtag cable 'Xilinx PYNQ-Z1 003017A6E375A' is selected.
+21:17:12 INFO  : 'jtag frequency' command is executed.
+21:17:12 INFO  : Sourcing of 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/ps7_init.tcl' is done.
+21:17:12 INFO  : Context for 'APU' is selected.
+21:17:12 INFO  : System reset is completed.
+21:17:15 INFO  : 'after 3000' command is executed.
+21:17:15 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A" && level==0} -index 1' command is executed.
+21:17:17 INFO  : FPGA configured successfully with bitstream "C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/top.bit"
+21:17:17 INFO  : Context for 'APU' is selected.
+21:17:19 INFO  : Hardware design information is loaded from 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/system.hdf'.
+21:17:19 INFO  : 'configparams force-mem-access 1' command is executed.
+21:17:19 INFO  : Context for 'APU' is selected.
+21:17:20 INFO  : 'ps7_init' command is executed.
+21:17:20 INFO  : 'ps7_post_config' command is executed.
+21:17:20 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:17:20 INFO  : The application 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Embedded_Exercise_normal/Debug/Embedded_Exercise_normal.elf' is downloaded to processor 'ps7_cortexa9_0'.
+21:17:20 INFO  : 'configparams force-mem-access 0' command is executed.
+21:17:20 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A" && level==0} -index 1
+fpga -file C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/top.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+loadhw -hw C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+dow C:/Users/MattiTuomela/software/Josuoikea/Sulari/Embedded_Exercise_normal/Debug/Embedded_Exercise_normal.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+21:17:20 INFO  : Memory regions updated for context APU
+21:17:20 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:17:20 INFO  : 'con' command is executed.
+21:17:20 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+con
+----------------End of Script----------------
+
+21:17:20 INFO  : Launch script is exported to file 'C:\Users\MattiTuomela\software\Josuoikea\Sulari\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_embedded_exercise_normal.elf_on_local.tcl'
+21:22:17 INFO  : Disconnected from the channel tcfchan#32.
+21:22:18 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:22:18 INFO  : Jtag cable 'Xilinx PYNQ-Z1 003017A6E375A' is selected.
+21:22:18 INFO  : 'jtag frequency' command is executed.
+21:22:18 INFO  : Sourcing of 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/ps7_init.tcl' is done.
+21:22:18 INFO  : Context for 'APU' is selected.
+21:22:18 INFO  : System reset is completed.
+21:22:21 INFO  : 'after 3000' command is executed.
+21:22:21 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A" && level==0} -index 1' command is executed.
+21:22:23 INFO  : FPGA configured successfully with bitstream "C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/top.bit"
+21:22:23 INFO  : Context for 'APU' is selected.
+21:22:25 INFO  : Hardware design information is loaded from 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/system.hdf'.
+21:22:25 INFO  : 'configparams force-mem-access 1' command is executed.
+21:22:25 INFO  : Context for 'APU' is selected.
+21:22:26 INFO  : 'ps7_init' command is executed.
+21:22:26 INFO  : 'ps7_post_config' command is executed.
+21:22:26 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:22:26 INFO  : The application 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Embedded_Exercise_normal/Debug/Embedded_Exercise_normal.elf' is downloaded to processor 'ps7_cortexa9_0'.
+21:22:26 INFO  : 'configparams force-mem-access 0' command is executed.
+21:22:26 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A" && level==0} -index 1
+fpga -file C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/top.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+loadhw -hw C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+dow C:/Users/MattiTuomela/software/Josuoikea/Sulari/Embedded_Exercise_normal/Debug/Embedded_Exercise_normal.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+21:22:26 INFO  : Memory regions updated for context APU
+21:22:26 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:22:26 INFO  : 'con' command is executed.
+21:22:26 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+con
+----------------End of Script----------------
+
+21:22:26 INFO  : Launch script is exported to file 'C:\Users\MattiTuomela\software\Josuoikea\Sulari\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_embedded_exercise_normal.elf_on_local.tcl'
+21:24:00 INFO  : Disconnected from the channel tcfchan#33.
+21:24:01 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:24:02 INFO  : Jtag cable 'Xilinx PYNQ-Z1 003017A6E375A' is selected.
+21:24:02 INFO  : 'jtag frequency' command is executed.
+21:24:02 INFO  : Sourcing of 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/ps7_init.tcl' is done.
+21:24:02 INFO  : Context for 'APU' is selected.
+21:24:02 INFO  : System reset is completed.
+21:24:05 INFO  : 'after 3000' command is executed.
+21:24:05 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A" && level==0} -index 1' command is executed.
+21:24:07 INFO  : FPGA configured successfully with bitstream "C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/top.bit"
+21:24:07 INFO  : Context for 'APU' is selected.
+21:24:09 INFO  : Hardware design information is loaded from 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/system.hdf'.
+21:24:09 INFO  : 'configparams force-mem-access 1' command is executed.
+21:24:09 INFO  : Context for 'APU' is selected.
+21:24:09 INFO  : 'ps7_init' command is executed.
+21:24:09 INFO  : 'ps7_post_config' command is executed.
+21:24:09 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:24:09 INFO  : The application 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Embedded_Exercise_normal/Debug/Embedded_Exercise_normal.elf' is downloaded to processor 'ps7_cortexa9_0'.
+21:24:09 INFO  : 'configparams force-mem-access 0' command is executed.
+21:24:09 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A" && level==0} -index 1
+fpga -file C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/top.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+loadhw -hw C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+dow C:/Users/MattiTuomela/software/Josuoikea/Sulari/Embedded_Exercise_normal/Debug/Embedded_Exercise_normal.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+21:24:09 INFO  : Memory regions updated for context APU
+21:24:10 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:24:10 INFO  : 'con' command is executed.
+21:24:10 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+con
+----------------End of Script----------------
+
+21:24:10 INFO  : Launch script is exported to file 'C:\Users\MattiTuomela\software\Josuoikea\Sulari\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_embedded_exercise_normal.elf_on_local.tcl'
+21:25:56 INFO  : Disconnected from the channel tcfchan#34.
+21:25:57 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:25:57 INFO  : Jtag cable 'Xilinx PYNQ-Z1 003017A6E375A' is selected.
+21:25:57 INFO  : 'jtag frequency' command is executed.
+21:25:57 INFO  : Sourcing of 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/ps7_init.tcl' is done.
+21:25:57 INFO  : Context for 'APU' is selected.
+21:25:57 INFO  : System reset is completed.
+21:26:00 INFO  : 'after 3000' command is executed.
+21:26:00 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A" && level==0} -index 1' command is executed.
+21:26:03 INFO  : FPGA configured successfully with bitstream "C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/top.bit"
+21:26:03 INFO  : Context for 'APU' is selected.
+21:26:05 INFO  : Hardware design information is loaded from 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/system.hdf'.
+21:26:05 INFO  : 'configparams force-mem-access 1' command is executed.
+21:26:05 INFO  : Context for 'APU' is selected.
+21:26:06 INFO  : 'ps7_init' command is executed.
+21:26:06 INFO  : 'ps7_post_config' command is executed.
+21:26:06 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:26:06 INFO  : The application 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Embedded_Exercise_normal/Debug/Embedded_Exercise_normal.elf' is downloaded to processor 'ps7_cortexa9_0'.
+21:26:06 INFO  : 'configparams force-mem-access 0' command is executed.
+21:26:06 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A" && level==0} -index 1
+fpga -file C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/top.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+loadhw -hw C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+dow C:/Users/MattiTuomela/software/Josuoikea/Sulari/Embedded_Exercise_normal/Debug/Embedded_Exercise_normal.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+21:26:06 INFO  : Memory regions updated for context APU
+21:26:06 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:26:06 INFO  : 'con' command is executed.
+21:26:06 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+con
+----------------End of Script----------------
+
+21:26:06 INFO  : Launch script is exported to file 'C:\Users\MattiTuomela\software\Josuoikea\Sulari\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_embedded_exercise_normal.elf_on_local.tcl'
+21:34:42 INFO  : Disconnected from the channel tcfchan#35.
+21:34:43 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:34:43 INFO  : Jtag cable 'Xilinx PYNQ-Z1 003017A6E375A' is selected.
+21:34:43 INFO  : 'jtag frequency' command is executed.
+21:34:43 INFO  : Sourcing of 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/ps7_init.tcl' is done.
+21:34:43 INFO  : Context for 'APU' is selected.
+21:34:43 INFO  : System reset is completed.
+21:34:46 INFO  : 'after 3000' command is executed.
+21:34:46 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A" && level==0} -index 1' command is executed.
+21:34:48 INFO  : FPGA configured successfully with bitstream "C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/top.bit"
+21:34:48 INFO  : Context for 'APU' is selected.
+21:34:50 INFO  : Hardware design information is loaded from 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/system.hdf'.
+21:34:50 INFO  : 'configparams force-mem-access 1' command is executed.
+21:34:50 INFO  : Context for 'APU' is selected.
+21:34:51 INFO  : 'ps7_init' command is executed.
+21:34:51 INFO  : 'ps7_post_config' command is executed.
+21:34:51 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:34:51 INFO  : The application 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Embedded_Exercise_normal/Debug/Embedded_Exercise_normal.elf' is downloaded to processor 'ps7_cortexa9_0'.
+21:34:51 INFO  : 'configparams force-mem-access 0' command is executed.
+21:34:51 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A" && level==0} -index 1
+fpga -file C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/top.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+loadhw -hw C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+dow C:/Users/MattiTuomela/software/Josuoikea/Sulari/Embedded_Exercise_normal/Debug/Embedded_Exercise_normal.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+21:34:51 INFO  : Memory regions updated for context APU
+21:34:51 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:34:51 INFO  : 'con' command is executed.
+21:34:51 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+con
+----------------End of Script----------------
+
+21:34:51 INFO  : Launch script is exported to file 'C:\Users\MattiTuomela\software\Josuoikea\Sulari\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_embedded_exercise_normal.elf_on_local.tcl'
+21:44:14 INFO  : Disconnected from the channel tcfchan#36.
+21:44:15 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:44:15 INFO  : Jtag cable 'Xilinx PYNQ-Z1 003017A6E375A' is selected.
+21:44:15 INFO  : 'jtag frequency' command is executed.
+21:44:16 INFO  : Sourcing of 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/ps7_init.tcl' is done.
+21:44:16 INFO  : Context for 'APU' is selected.
+21:44:16 INFO  : System reset is completed.
+21:44:19 INFO  : 'after 3000' command is executed.
+21:44:19 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A" && level==0} -index 1' command is executed.
+21:44:21 INFO  : FPGA configured successfully with bitstream "C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/top.bit"
+21:44:21 INFO  : Context for 'APU' is selected.
+21:44:23 INFO  : Hardware design information is loaded from 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/system.hdf'.
+21:44:23 INFO  : 'configparams force-mem-access 1' command is executed.
+21:44:23 INFO  : Context for 'APU' is selected.
+21:44:24 INFO  : 'ps7_init' command is executed.
+21:44:24 INFO  : 'ps7_post_config' command is executed.
+21:44:24 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:44:24 INFO  : The application 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Embedded_Exercise_normal/Debug/Embedded_Exercise_normal.elf' is downloaded to processor 'ps7_cortexa9_0'.
+21:44:24 INFO  : 'configparams force-mem-access 0' command is executed.
+21:44:24 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A" && level==0} -index 1
+fpga -file C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/top.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+loadhw -hw C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+dow C:/Users/MattiTuomela/software/Josuoikea/Sulari/Embedded_Exercise_normal/Debug/Embedded_Exercise_normal.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+21:44:24 INFO  : Memory regions updated for context APU
+21:44:24 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:44:24 INFO  : 'con' command is executed.
+21:44:24 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+con
+----------------End of Script----------------
+
+21:44:24 INFO  : Launch script is exported to file 'C:\Users\MattiTuomela\software\Josuoikea\Sulari\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_embedded_exercise_normal.elf_on_local.tcl'
+21:45:06 INFO  : Disconnected from the channel tcfchan#37.
+21:45:07 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:45:07 INFO  : Jtag cable 'Xilinx PYNQ-Z1 003017A6E375A' is selected.
+21:45:07 INFO  : 'jtag frequency' command is executed.
+21:45:07 INFO  : Sourcing of 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/ps7_init.tcl' is done.
+21:45:07 INFO  : Context for 'APU' is selected.
+21:45:07 INFO  : System reset is completed.
+21:45:10 INFO  : 'after 3000' command is executed.
+21:45:11 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A" && level==0} -index 1' command is executed.
+21:45:13 INFO  : FPGA configured successfully with bitstream "C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/top.bit"
+21:45:13 INFO  : Context for 'APU' is selected.
+21:45:14 INFO  : Hardware design information is loaded from 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/system.hdf'.
+21:45:14 INFO  : 'configparams force-mem-access 1' command is executed.
+21:45:14 INFO  : Context for 'APU' is selected.
+21:45:15 INFO  : 'ps7_init' command is executed.
+21:45:15 INFO  : 'ps7_post_config' command is executed.
+21:45:15 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:45:15 INFO  : The application 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Embedded_Exercise_normal/Debug/Embedded_Exercise_normal.elf' is downloaded to processor 'ps7_cortexa9_0'.
+21:45:15 INFO  : 'configparams force-mem-access 0' command is executed.
+21:45:15 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A" && level==0} -index 1
+fpga -file C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/top.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+loadhw -hw C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+dow C:/Users/MattiTuomela/software/Josuoikea/Sulari/Embedded_Exercise_normal/Debug/Embedded_Exercise_normal.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+21:45:15 INFO  : Memory regions updated for context APU
+21:45:15 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:45:15 INFO  : 'con' command is executed.
+21:45:15 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+con
+----------------End of Script----------------
+
+21:45:15 INFO  : Launch script is exported to file 'C:\Users\MattiTuomela\software\Josuoikea\Sulari\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_embedded_exercise_normal.elf_on_local.tcl'
+22:35:18 INFO  : Disconnected from the channel tcfchan#38.
+22:35:19 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:35:19 INFO  : Jtag cable 'Xilinx PYNQ-Z1 003017A6E375A' is selected.
+22:35:19 INFO  : 'jtag frequency' command is executed.
+22:35:19 INFO  : Sourcing of 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/ps7_init.tcl' is done.
+22:35:19 INFO  : Context for 'APU' is selected.
+22:35:19 INFO  : System reset is completed.
+22:35:22 INFO  : 'after 3000' command is executed.
+22:35:22 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A" && level==0} -index 1' command is executed.
+22:35:24 INFO  : FPGA configured successfully with bitstream "C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/top.bit"
+22:35:24 INFO  : Context for 'APU' is selected.
+22:35:26 INFO  : Hardware design information is loaded from 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/system.hdf'.
+22:35:26 INFO  : 'configparams force-mem-access 1' command is executed.
+22:35:26 INFO  : Context for 'APU' is selected.
+22:35:27 INFO  : 'ps7_init' command is executed.
+22:35:27 INFO  : 'ps7_post_config' command is executed.
+22:35:27 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:35:27 INFO  : The application 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Embedded_Exercise_normal/Debug/Embedded_Exercise_normal.elf' is downloaded to processor 'ps7_cortexa9_0'.
+22:35:27 INFO  : 'configparams force-mem-access 0' command is executed.
+22:35:27 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A" && level==0} -index 1
+fpga -file C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/top.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+loadhw -hw C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+dow C:/Users/MattiTuomela/software/Josuoikea/Sulari/Embedded_Exercise_normal/Debug/Embedded_Exercise_normal.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+22:35:27 INFO  : Memory regions updated for context APU
+22:35:27 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:35:27 INFO  : 'con' command is executed.
+22:35:27 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+con
+----------------End of Script----------------
+
+22:35:27 INFO  : Launch script is exported to file 'C:\Users\MattiTuomela\software\Josuoikea\Sulari\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_embedded_exercise_normal.elf_on_local.tcl'
+22:52:02 INFO  : Disconnected from the channel tcfchan#39.
+22:52:03 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:52:03 INFO  : Jtag cable 'Xilinx PYNQ-Z1 003017A6E375A' is selected.
+22:52:03 INFO  : 'jtag frequency' command is executed.
+22:52:03 INFO  : Sourcing of 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/ps7_init.tcl' is done.
+22:52:03 INFO  : Context for 'APU' is selected.
+22:52:03 INFO  : System reset is completed.
+22:52:06 INFO  : 'after 3000' command is executed.
+22:52:06 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A" && level==0} -index 1' command is executed.
+22:52:08 INFO  : FPGA configured successfully with bitstream "C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/top.bit"
+22:52:08 INFO  : Context for 'APU' is selected.
+22:52:10 INFO  : Hardware design information is loaded from 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/system.hdf'.
+22:52:10 INFO  : 'configparams force-mem-access 1' command is executed.
+22:52:10 INFO  : Context for 'APU' is selected.
+22:52:11 INFO  : 'ps7_init' command is executed.
+22:52:11 INFO  : 'ps7_post_config' command is executed.
+22:52:11 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:52:12 INFO  : The application 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Embedded_Exercise_normal/Debug/Embedded_Exercise_normal.elf' is downloaded to processor 'ps7_cortexa9_0'.
+22:52:12 INFO  : 'configparams force-mem-access 0' command is executed.
+22:52:12 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A" && level==0} -index 1
+fpga -file C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/top.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+loadhw -hw C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+dow C:/Users/MattiTuomela/software/Josuoikea/Sulari/Embedded_Exercise_normal/Debug/Embedded_Exercise_normal.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+22:52:12 INFO  : Memory regions updated for context APU
+22:52:12 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:52:12 INFO  : 'con' command is executed.
+22:52:12 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+con
+----------------End of Script----------------
+
+22:52:12 INFO  : Launch script is exported to file 'C:\Users\MattiTuomela\software\Josuoikea\Sulari\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_embedded_exercise_normal.elf_on_local.tcl'
+22:58:49 INFO  : Disconnected from the channel tcfchan#40.
+22:58:50 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:58:50 INFO  : Jtag cable 'Xilinx PYNQ-Z1 003017A6E375A' is selected.
+22:58:50 INFO  : 'jtag frequency' command is executed.
+22:58:50 INFO  : Sourcing of 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/ps7_init.tcl' is done.
+22:58:50 INFO  : Context for 'APU' is selected.
+22:58:50 INFO  : System reset is completed.
+22:58:53 INFO  : 'after 3000' command is executed.
+22:58:53 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A" && level==0} -index 1' command is executed.
+22:58:55 INFO  : FPGA configured successfully with bitstream "C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/top.bit"
+22:58:56 INFO  : Context for 'APU' is selected.
+22:58:57 INFO  : Hardware design information is loaded from 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/system.hdf'.
+22:58:57 INFO  : 'configparams force-mem-access 1' command is executed.
+22:58:57 INFO  : Context for 'APU' is selected.
+22:58:58 INFO  : 'ps7_init' command is executed.
+22:58:58 INFO  : 'ps7_post_config' command is executed.
+22:58:58 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:58:58 INFO  : The application 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Embedded_Exercise_normal/Debug/Embedded_Exercise_normal.elf' is downloaded to processor 'ps7_cortexa9_0'.
+22:58:58 INFO  : 'configparams force-mem-access 0' command is executed.
+22:58:58 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A" && level==0} -index 1
+fpga -file C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/top.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+loadhw -hw C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+dow C:/Users/MattiTuomela/software/Josuoikea/Sulari/Embedded_Exercise_normal/Debug/Embedded_Exercise_normal.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+22:58:58 INFO  : Memory regions updated for context APU
+22:58:58 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:58:58 INFO  : 'con' command is executed.
+22:58:58 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+con
+----------------End of Script----------------
+
+22:58:58 INFO  : Launch script is exported to file 'C:\Users\MattiTuomela\software\Josuoikea\Sulari\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_embedded_exercise_normal.elf_on_local.tcl'
+23:02:03 INFO  : Disconnected from the channel tcfchan#41.
+23:02:04 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:02:04 INFO  : Jtag cable 'Xilinx PYNQ-Z1 003017A6E375A' is selected.
+23:02:04 INFO  : 'jtag frequency' command is executed.
+23:02:04 INFO  : Sourcing of 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/ps7_init.tcl' is done.
+23:02:04 INFO  : Context for 'APU' is selected.
+23:02:04 INFO  : System reset is completed.
+23:02:07 INFO  : 'after 3000' command is executed.
+23:02:07 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A" && level==0} -index 1' command is executed.
+23:02:10 INFO  : FPGA configured successfully with bitstream "C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/top.bit"
+23:02:10 INFO  : Context for 'APU' is selected.
+23:02:11 INFO  : Hardware design information is loaded from 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/system.hdf'.
+23:02:11 INFO  : 'configparams force-mem-access 1' command is executed.
+23:02:11 INFO  : Context for 'APU' is selected.
+23:02:12 INFO  : 'ps7_init' command is executed.
+23:02:12 INFO  : 'ps7_post_config' command is executed.
+23:02:12 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:02:12 INFO  : The application 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Embedded_Exercise_normal/Debug/Embedded_Exercise_normal.elf' is downloaded to processor 'ps7_cortexa9_0'.
+23:02:12 INFO  : 'configparams force-mem-access 0' command is executed.
+23:02:12 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A" && level==0} -index 1
+fpga -file C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/top.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+loadhw -hw C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+dow C:/Users/MattiTuomela/software/Josuoikea/Sulari/Embedded_Exercise_normal/Debug/Embedded_Exercise_normal.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+23:02:12 INFO  : Memory regions updated for context APU
+23:02:12 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:02:12 INFO  : 'con' command is executed.
+23:02:12 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+con
+----------------End of Script----------------
+
+23:02:12 INFO  : Launch script is exported to file 'C:\Users\MattiTuomela\software\Josuoikea\Sulari\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_embedded_exercise_normal.elf_on_local.tcl'
+23:03:40 INFO  : Disconnected from the channel tcfchan#42.
+23:03:41 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:03:41 INFO  : Jtag cable 'Xilinx PYNQ-Z1 003017A6E375A' is selected.
+23:03:41 INFO  : 'jtag frequency' command is executed.
+23:03:41 INFO  : Sourcing of 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/ps7_init.tcl' is done.
+23:03:41 INFO  : Context for 'APU' is selected.
+23:03:41 INFO  : System reset is completed.
+23:03:44 INFO  : 'after 3000' command is executed.
+23:03:44 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A" && level==0} -index 1' command is executed.
+23:03:47 INFO  : FPGA configured successfully with bitstream "C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/top.bit"
+23:03:47 INFO  : Context for 'APU' is selected.
+23:03:48 INFO  : Hardware design information is loaded from 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/system.hdf'.
+23:03:48 INFO  : 'configparams force-mem-access 1' command is executed.
+23:03:48 INFO  : Context for 'APU' is selected.
+23:03:49 INFO  : 'ps7_init' command is executed.
+23:03:49 INFO  : 'ps7_post_config' command is executed.
+23:03:49 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:03:49 INFO  : The application 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Embedded_Exercise_normal/Debug/Embedded_Exercise_normal.elf' is downloaded to processor 'ps7_cortexa9_0'.
+23:03:49 INFO  : 'configparams force-mem-access 0' command is executed.
+23:03:49 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A" && level==0} -index 1
+fpga -file C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/top.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+loadhw -hw C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+dow C:/Users/MattiTuomela/software/Josuoikea/Sulari/Embedded_Exercise_normal/Debug/Embedded_Exercise_normal.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+23:03:49 INFO  : Memory regions updated for context APU
+23:03:49 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:03:49 INFO  : 'con' command is executed.
+23:03:49 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+con
+----------------End of Script----------------
+
+23:03:49 INFO  : Launch script is exported to file 'C:\Users\MattiTuomela\software\Josuoikea\Sulari\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_embedded_exercise_normal.elf_on_local.tcl'
+23:16:59 INFO  : Disconnected from the channel tcfchan#43.
+23:17:00 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:17:00 INFO  : Jtag cable 'Xilinx PYNQ-Z1 003017A6E375A' is selected.
+23:17:00 INFO  : 'jtag frequency' command is executed.
+23:17:00 INFO  : Sourcing of 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/ps7_init.tcl' is done.
+23:17:00 INFO  : Context for 'APU' is selected.
+23:17:00 INFO  : System reset is completed.
+23:17:03 INFO  : 'after 3000' command is executed.
+23:17:03 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A" && level==0} -index 1' command is executed.
+23:17:06 INFO  : FPGA configured successfully with bitstream "C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/top.bit"
+23:17:06 INFO  : Context for 'APU' is selected.
+23:17:07 INFO  : Hardware design information is loaded from 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/system.hdf'.
+23:17:07 INFO  : 'configparams force-mem-access 1' command is executed.
+23:17:07 INFO  : Context for 'APU' is selected.
+23:17:07 INFO  : 'ps7_init' command is executed.
+23:17:07 INFO  : 'ps7_post_config' command is executed.
+23:17:07 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:17:08 INFO  : The application 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Embedded_Exercise_normal/Debug/Embedded_Exercise_normal.elf' is downloaded to processor 'ps7_cortexa9_0'.
+23:17:08 INFO  : 'configparams force-mem-access 0' command is executed.
+23:17:08 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A" && level==0} -index 1
+fpga -file C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/top.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+loadhw -hw C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+dow C:/Users/MattiTuomela/software/Josuoikea/Sulari/Embedded_Exercise_normal/Debug/Embedded_Exercise_normal.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+23:17:08 INFO  : Memory regions updated for context APU
+23:17:08 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:17:08 INFO  : 'con' command is executed.
+23:17:08 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+con
+----------------End of Script----------------
+
+23:17:08 INFO  : Launch script is exported to file 'C:\Users\MattiTuomela\software\Josuoikea\Sulari\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_embedded_exercise_normal.elf_on_local.tcl'
+23:19:27 INFO  : Disconnected from the channel tcfchan#44.
+23:19:29 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:19:29 INFO  : Jtag cable 'Xilinx PYNQ-Z1 003017A6E375A' is selected.
+23:19:29 INFO  : 'jtag frequency' command is executed.
+23:19:29 INFO  : Sourcing of 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/ps7_init.tcl' is done.
+23:19:29 INFO  : Context for 'APU' is selected.
+23:19:29 INFO  : System reset is completed.
+23:19:32 INFO  : 'after 3000' command is executed.
+23:19:32 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A" && level==0} -index 1' command is executed.
+23:19:34 INFO  : FPGA configured successfully with bitstream "C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/top.bit"
+23:19:34 INFO  : Context for 'APU' is selected.
+23:19:36 INFO  : Hardware design information is loaded from 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/system.hdf'.
+23:19:36 INFO  : 'configparams force-mem-access 1' command is executed.
+23:19:36 INFO  : Context for 'APU' is selected.
+23:19:36 INFO  : 'ps7_init' command is executed.
+23:19:36 INFO  : 'ps7_post_config' command is executed.
+23:19:37 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:19:37 INFO  : The application 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Embedded_Exercise_normal/Debug/Embedded_Exercise_normal.elf' is downloaded to processor 'ps7_cortexa9_0'.
+23:19:37 INFO  : 'configparams force-mem-access 0' command is executed.
+23:19:37 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A" && level==0} -index 1
+fpga -file C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/top.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+loadhw -hw C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+dow C:/Users/MattiTuomela/software/Josuoikea/Sulari/Embedded_Exercise_normal/Debug/Embedded_Exercise_normal.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+23:19:37 INFO  : Memory regions updated for context APU
+23:19:37 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:19:37 INFO  : 'con' command is executed.
+23:19:37 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+con
+----------------End of Script----------------
+
+23:19:37 INFO  : Launch script is exported to file 'C:\Users\MattiTuomela\software\Josuoikea\Sulari\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_embedded_exercise_normal.elf_on_local.tcl'
+23:21:49 INFO  : Disconnected from the channel tcfchan#45.
+23:21:50 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:21:51 INFO  : Jtag cable 'Xilinx PYNQ-Z1 003017A6E375A' is selected.
+23:21:51 INFO  : 'jtag frequency' command is executed.
+23:21:51 INFO  : Sourcing of 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/ps7_init.tcl' is done.
+23:21:51 INFO  : Context for 'APU' is selected.
+23:21:51 INFO  : System reset is completed.
+23:21:54 INFO  : 'after 3000' command is executed.
+23:21:54 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A" && level==0} -index 1' command is executed.
+23:21:56 INFO  : FPGA configured successfully with bitstream "C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/top.bit"
+23:21:56 INFO  : Context for 'APU' is selected.
+23:21:57 INFO  : Hardware design information is loaded from 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/system.hdf'.
+23:21:57 INFO  : 'configparams force-mem-access 1' command is executed.
+23:21:57 INFO  : Context for 'APU' is selected.
+23:21:58 INFO  : 'ps7_init' command is executed.
+23:21:58 INFO  : 'ps7_post_config' command is executed.
+23:21:58 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:21:58 INFO  : The application 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Embedded_Exercise_normal/Debug/Embedded_Exercise_normal.elf' is downloaded to processor 'ps7_cortexa9_0'.
+23:21:58 INFO  : 'configparams force-mem-access 0' command is executed.
+23:21:58 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A" && level==0} -index 1
+fpga -file C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/top.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+loadhw -hw C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+dow C:/Users/MattiTuomela/software/Josuoikea/Sulari/Embedded_Exercise_normal/Debug/Embedded_Exercise_normal.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+23:21:58 INFO  : Memory regions updated for context APU
+23:21:58 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:21:58 INFO  : 'con' command is executed.
+23:21:58 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+con
+----------------End of Script----------------
+
+23:21:58 INFO  : Launch script is exported to file 'C:\Users\MattiTuomela\software\Josuoikea\Sulari\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_embedded_exercise_normal.elf_on_local.tcl'
+23:43:29 INFO  : Disconnected from the channel tcfchan#46.
+23:43:30 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:43:30 INFO  : Jtag cable 'Xilinx PYNQ-Z1 003017A6E375A' is selected.
+23:43:30 INFO  : 'jtag frequency' command is executed.
+23:43:30 INFO  : Sourcing of 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/ps7_init.tcl' is done.
+23:43:30 INFO  : Context for 'APU' is selected.
+23:43:30 INFO  : System reset is completed.
+23:43:33 INFO  : 'after 3000' command is executed.
+23:43:33 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A" && level==0} -index 1' command is executed.
+23:43:35 INFO  : FPGA configured successfully with bitstream "C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/top.bit"
+23:43:35 INFO  : Context for 'APU' is selected.
+23:43:38 INFO  : Hardware design information is loaded from 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/system.hdf'.
+23:43:38 INFO  : 'configparams force-mem-access 1' command is executed.
+23:43:38 INFO  : Context for 'APU' is selected.
+23:43:40 INFO  : 'ps7_init' command is executed.
+23:43:40 INFO  : 'ps7_post_config' command is executed.
+23:43:40 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:43:41 INFO  : The application 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Embedded_Exercise_normal/Debug/Embedded_Exercise_normal.elf' is downloaded to processor 'ps7_cortexa9_0'.
+23:43:41 INFO  : 'configparams force-mem-access 0' command is executed.
+23:43:41 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A" && level==0} -index 1
+fpga -file C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/top.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+loadhw -hw C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+dow C:/Users/MattiTuomela/software/Josuoikea/Sulari/Embedded_Exercise_normal/Debug/Embedded_Exercise_normal.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+23:43:41 INFO  : Memory regions updated for context APU
+23:43:41 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:43:41 INFO  : 'con' command is executed.
+23:43:41 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+con
+----------------End of Script----------------
+
+23:43:41 INFO  : Launch script is exported to file 'C:\Users\MattiTuomela\software\Josuoikea\Sulari\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_embedded_exercise_normal.elf_on_local.tcl'
+23:44:30 INFO  : Disconnected from the channel tcfchan#47.
+23:44:31 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:44:31 INFO  : Jtag cable 'Xilinx PYNQ-Z1 003017A6E375A' is selected.
+23:44:31 INFO  : 'jtag frequency' command is executed.
+23:44:31 INFO  : Sourcing of 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/ps7_init.tcl' is done.
+23:44:31 INFO  : Context for 'APU' is selected.
+23:44:31 INFO  : System reset is completed.
+23:44:34 INFO  : 'after 3000' command is executed.
+23:44:34 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A" && level==0} -index 1' command is executed.
+23:44:37 INFO  : FPGA configured successfully with bitstream "C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/top.bit"
+23:44:37 INFO  : Context for 'APU' is selected.
+23:44:39 INFO  : Hardware design information is loaded from 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/system.hdf'.
+23:44:39 INFO  : 'configparams force-mem-access 1' command is executed.
+23:44:39 INFO  : Context for 'APU' is selected.
+23:44:39 INFO  : 'ps7_init' command is executed.
+23:44:39 INFO  : 'ps7_post_config' command is executed.
+23:44:39 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:44:40 INFO  : The application 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Embedded_Exercise_normal/Debug/Embedded_Exercise_normal.elf' is downloaded to processor 'ps7_cortexa9_0'.
+23:44:40 INFO  : 'configparams force-mem-access 0' command is executed.
+23:44:40 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A" && level==0} -index 1
+fpga -file C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/top.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+loadhw -hw C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+dow C:/Users/MattiTuomela/software/Josuoikea/Sulari/Embedded_Exercise_normal/Debug/Embedded_Exercise_normal.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+23:44:40 INFO  : Memory regions updated for context APU
+23:44:40 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:44:40 INFO  : 'con' command is executed.
+23:44:40 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+con
+----------------End of Script----------------
+
+23:44:40 INFO  : Launch script is exported to file 'C:\Users\MattiTuomela\software\Josuoikea\Sulari\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_embedded_exercise_normal.elf_on_local.tcl'
+23:52:15 INFO  : Disconnected from the channel tcfchan#48.
+23:52:16 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:52:16 INFO  : Jtag cable 'Xilinx PYNQ-Z1 003017A6E375A' is selected.
+23:52:16 INFO  : 'jtag frequency' command is executed.
+23:52:16 INFO  : Sourcing of 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/ps7_init.tcl' is done.
+23:52:16 INFO  : Context for 'APU' is selected.
+23:52:16 INFO  : System reset is completed.
+23:52:19 INFO  : 'after 3000' command is executed.
+23:52:19 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A" && level==0} -index 1' command is executed.
+23:52:22 INFO  : FPGA configured successfully with bitstream "C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/top.bit"
+23:52:22 INFO  : Context for 'APU' is selected.
+23:52:24 INFO  : Hardware design information is loaded from 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/system.hdf'.
+23:52:24 INFO  : 'configparams force-mem-access 1' command is executed.
+23:52:24 INFO  : Context for 'APU' is selected.
+23:52:25 INFO  : 'ps7_init' command is executed.
+23:52:25 INFO  : 'ps7_post_config' command is executed.
+23:52:25 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:52:25 INFO  : The application 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Embedded_Exercise_normal/Debug/Embedded_Exercise_normal.elf' is downloaded to processor 'ps7_cortexa9_0'.
+23:52:25 INFO  : 'configparams force-mem-access 0' command is executed.
+23:52:25 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A" && level==0} -index 1
+fpga -file C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/top.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+loadhw -hw C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+dow C:/Users/MattiTuomela/software/Josuoikea/Sulari/Embedded_Exercise_normal/Debug/Embedded_Exercise_normal.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+23:52:25 INFO  : Memory regions updated for context APU
+23:52:25 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:52:25 INFO  : 'con' command is executed.
+23:52:25 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+con
+----------------End of Script----------------
+
+23:52:25 INFO  : Launch script is exported to file 'C:\Users\MattiTuomela\software\Josuoikea\Sulari\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_embedded_exercise_normal.elf_on_local.tcl'
+23:54:23 INFO  : Disconnected from the channel tcfchan#49.
+23:54:24 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:54:24 INFO  : Jtag cable 'Xilinx PYNQ-Z1 003017A6E375A' is selected.
+23:54:24 INFO  : 'jtag frequency' command is executed.
+23:54:24 INFO  : Sourcing of 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/ps7_init.tcl' is done.
+23:54:24 INFO  : Context for 'APU' is selected.
+23:54:24 INFO  : System reset is completed.
+23:54:27 INFO  : 'after 3000' command is executed.
+23:54:27 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A" && level==0} -index 1' command is executed.
+23:54:30 INFO  : FPGA configured successfully with bitstream "C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/top.bit"
+23:54:30 INFO  : Context for 'APU' is selected.
+23:54:31 INFO  : Hardware design information is loaded from 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/system.hdf'.
+23:54:31 INFO  : 'configparams force-mem-access 1' command is executed.
+23:54:31 INFO  : Context for 'APU' is selected.
+23:54:32 INFO  : 'ps7_init' command is executed.
+23:54:32 INFO  : 'ps7_post_config' command is executed.
+23:54:32 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:54:32 INFO  : The application 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Embedded_Exercise_normal/Debug/Embedded_Exercise_normal.elf' is downloaded to processor 'ps7_cortexa9_0'.
+23:54:32 INFO  : 'configparams force-mem-access 0' command is executed.
+23:54:32 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A" && level==0} -index 1
+fpga -file C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/top.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+loadhw -hw C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+dow C:/Users/MattiTuomela/software/Josuoikea/Sulari/Embedded_Exercise_normal/Debug/Embedded_Exercise_normal.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+23:54:32 INFO  : Memory regions updated for context APU
+23:54:32 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:54:32 INFO  : 'con' command is executed.
+23:54:32 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+con
+----------------End of Script----------------
+
+23:54:32 INFO  : Launch script is exported to file 'C:\Users\MattiTuomela\software\Josuoikea\Sulari\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_embedded_exercise_normal.elf_on_local.tcl'
+23:55:20 INFO  : Disconnected from the channel tcfchan#50.
+23:55:21 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:55:21 INFO  : Jtag cable 'Xilinx PYNQ-Z1 003017A6E375A' is selected.
+23:55:21 INFO  : 'jtag frequency' command is executed.
+23:55:21 INFO  : Sourcing of 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/ps7_init.tcl' is done.
+23:55:21 INFO  : Context for 'APU' is selected.
+23:55:21 INFO  : System reset is completed.
+23:55:24 INFO  : 'after 3000' command is executed.
+23:55:24 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A" && level==0} -index 1' command is executed.
+23:55:27 INFO  : FPGA configured successfully with bitstream "C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/top.bit"
+23:55:27 INFO  : Context for 'APU' is selected.
+23:55:28 INFO  : Hardware design information is loaded from 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/system.hdf'.
+23:55:28 INFO  : 'configparams force-mem-access 1' command is executed.
+23:55:29 INFO  : Context for 'APU' is selected.
+23:55:29 INFO  : 'ps7_init' command is executed.
+23:55:29 INFO  : 'ps7_post_config' command is executed.
+23:55:29 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:55:29 INFO  : The application 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Embedded_Exercise_normal/Debug/Embedded_Exercise_normal.elf' is downloaded to processor 'ps7_cortexa9_0'.
+23:55:29 INFO  : 'configparams force-mem-access 0' command is executed.
+23:55:29 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A" && level==0} -index 1
+fpga -file C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/top.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+loadhw -hw C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+dow C:/Users/MattiTuomela/software/Josuoikea/Sulari/Embedded_Exercise_normal/Debug/Embedded_Exercise_normal.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+23:55:29 INFO  : Memory regions updated for context APU
+23:55:29 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:55:29 INFO  : 'con' command is executed.
+23:55:29 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+con
+----------------End of Script----------------
+
+23:55:29 INFO  : Launch script is exported to file 'C:\Users\MattiTuomela\software\Josuoikea\Sulari\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_embedded_exercise_normal.elf_on_local.tcl'
+00:05:52 INFO  : Disconnected from the channel tcfchan#51.
+00:05:53 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:05:53 INFO  : Jtag cable 'Xilinx PYNQ-Z1 003017A6E375A' is selected.
+00:05:53 INFO  : 'jtag frequency' command is executed.
+00:05:53 INFO  : Sourcing of 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/ps7_init.tcl' is done.
+00:05:53 INFO  : Context for 'APU' is selected.
+00:05:53 INFO  : System reset is completed.
+00:05:56 INFO  : 'after 3000' command is executed.
+00:05:56 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A" && level==0} -index 1' command is executed.
+00:05:58 INFO  : FPGA configured successfully with bitstream "C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/top.bit"
+00:05:58 INFO  : Context for 'APU' is selected.
+00:06:00 INFO  : Hardware design information is loaded from 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/system.hdf'.
+00:06:00 INFO  : 'configparams force-mem-access 1' command is executed.
+00:06:00 INFO  : Context for 'APU' is selected.
+00:06:01 INFO  : 'ps7_init' command is executed.
+00:06:01 INFO  : 'ps7_post_config' command is executed.
+00:06:01 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:06:01 INFO  : The application 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Embedded_Exercise_normal/Debug/Embedded_Exercise_normal.elf' is downloaded to processor 'ps7_cortexa9_0'.
+00:06:01 INFO  : 'configparams force-mem-access 0' command is executed.
+00:06:01 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A" && level==0} -index 1
+fpga -file C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/top.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+loadhw -hw C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+dow C:/Users/MattiTuomela/software/Josuoikea/Sulari/Embedded_Exercise_normal/Debug/Embedded_Exercise_normal.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+00:06:01 INFO  : Memory regions updated for context APU
+00:06:02 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:06:02 INFO  : 'con' command is executed.
+00:06:02 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+con
+----------------End of Script----------------
+
+00:06:02 INFO  : Launch script is exported to file 'C:\Users\MattiTuomela\software\Josuoikea\Sulari\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_embedded_exercise_normal.elf_on_local.tcl'
+00:11:17 INFO  : Disconnected from the channel tcfchan#52.
+00:11:18 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:11:19 INFO  : Jtag cable 'Xilinx PYNQ-Z1 003017A6E375A' is selected.
+00:11:19 INFO  : 'jtag frequency' command is executed.
+00:11:19 INFO  : Sourcing of 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/ps7_init.tcl' is done.
+00:11:19 INFO  : Context for 'APU' is selected.
+00:11:19 INFO  : System reset is completed.
+00:11:22 INFO  : 'after 3000' command is executed.
+00:11:22 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A" && level==0} -index 1' command is executed.
+00:11:24 INFO  : FPGA configured successfully with bitstream "C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/top.bit"
+00:11:24 INFO  : Context for 'APU' is selected.
+00:11:26 INFO  : Hardware design information is loaded from 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/system.hdf'.
+00:11:26 INFO  : 'configparams force-mem-access 1' command is executed.
+00:11:26 INFO  : Context for 'APU' is selected.
+00:11:26 INFO  : 'ps7_init' command is executed.
+00:11:26 INFO  : 'ps7_post_config' command is executed.
+00:11:26 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:11:26 INFO  : The application 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Embedded_Exercise_normal/Debug/Embedded_Exercise_normal.elf' is downloaded to processor 'ps7_cortexa9_0'.
+00:11:26 INFO  : 'configparams force-mem-access 0' command is executed.
+00:11:26 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A" && level==0} -index 1
+fpga -file C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/top.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+loadhw -hw C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+dow C:/Users/MattiTuomela/software/Josuoikea/Sulari/Embedded_Exercise_normal/Debug/Embedded_Exercise_normal.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+00:11:26 INFO  : Memory regions updated for context APU
+00:11:27 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:11:27 INFO  : 'con' command is executed.
+00:11:27 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+con
+----------------End of Script----------------
+
+00:11:27 INFO  : Launch script is exported to file 'C:\Users\MattiTuomela\software\Josuoikea\Sulari\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_embedded_exercise_normal.elf_on_local.tcl'
+00:13:17 INFO  : Disconnected from the channel tcfchan#53.
+00:13:18 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:13:18 INFO  : Jtag cable 'Xilinx PYNQ-Z1 003017A6E375A' is selected.
+00:13:18 INFO  : 'jtag frequency' command is executed.
+00:13:18 INFO  : Sourcing of 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/ps7_init.tcl' is done.
+00:13:18 INFO  : Context for 'APU' is selected.
+00:13:18 INFO  : System reset is completed.
+00:13:21 INFO  : 'after 3000' command is executed.
+00:13:21 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A" && level==0} -index 1' command is executed.
+00:13:24 INFO  : FPGA configured successfully with bitstream "C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/top.bit"
+00:13:24 INFO  : Context for 'APU' is selected.
+00:13:25 INFO  : Hardware design information is loaded from 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/system.hdf'.
+00:13:25 INFO  : 'configparams force-mem-access 1' command is executed.
+00:13:25 INFO  : Context for 'APU' is selected.
+00:13:26 INFO  : 'ps7_init' command is executed.
+00:13:26 INFO  : 'ps7_post_config' command is executed.
+00:13:26 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:13:26 INFO  : The application 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Embedded_Exercise_normal/Debug/Embedded_Exercise_normal.elf' is downloaded to processor 'ps7_cortexa9_0'.
+00:13:26 INFO  : 'configparams force-mem-access 0' command is executed.
+00:13:26 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A" && level==0} -index 1
+fpga -file C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/top.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+loadhw -hw C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+dow C:/Users/MattiTuomela/software/Josuoikea/Sulari/Embedded_Exercise_normal/Debug/Embedded_Exercise_normal.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+00:13:26 INFO  : Memory regions updated for context APU
+00:13:26 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:13:26 INFO  : 'con' command is executed.
+00:13:26 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+con
+----------------End of Script----------------
+
+00:13:26 INFO  : Launch script is exported to file 'C:\Users\MattiTuomela\software\Josuoikea\Sulari\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_embedded_exercise_normal.elf_on_local.tcl'
+00:18:08 INFO  : Disconnected from the channel tcfchan#54.
+00:18:09 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:18:09 INFO  : Jtag cable 'Xilinx PYNQ-Z1 003017A6E375A' is selected.
+00:18:09 INFO  : 'jtag frequency' command is executed.
+00:18:09 INFO  : Sourcing of 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/ps7_init.tcl' is done.
+00:18:09 INFO  : Context for 'APU' is selected.
+00:18:09 INFO  : System reset is completed.
+00:18:12 INFO  : 'after 3000' command is executed.
+00:18:12 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A" && level==0} -index 1' command is executed.
+00:18:15 INFO  : FPGA configured successfully with bitstream "C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/top.bit"
+00:18:15 INFO  : Context for 'APU' is selected.
+00:18:16 INFO  : Hardware design information is loaded from 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/system.hdf'.
+00:18:16 INFO  : 'configparams force-mem-access 1' command is executed.
+00:18:16 INFO  : Context for 'APU' is selected.
+00:18:17 INFO  : 'ps7_init' command is executed.
+00:18:17 INFO  : 'ps7_post_config' command is executed.
+00:18:17 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:18:17 INFO  : The application 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Embedded_Exercise_normal/Debug/Embedded_Exercise_normal.elf' is downloaded to processor 'ps7_cortexa9_0'.
+00:18:17 INFO  : 'configparams force-mem-access 0' command is executed.
+00:18:17 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A" && level==0} -index 1
+fpga -file C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/top.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+loadhw -hw C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+dow C:/Users/MattiTuomela/software/Josuoikea/Sulari/Embedded_Exercise_normal/Debug/Embedded_Exercise_normal.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+00:18:17 INFO  : Memory regions updated for context APU
+00:18:17 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:18:17 INFO  : 'con' command is executed.
+00:18:17 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+con
+----------------End of Script----------------
+
+00:18:17 INFO  : Launch script is exported to file 'C:\Users\MattiTuomela\software\Josuoikea\Sulari\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_embedded_exercise_normal.elf_on_local.tcl'
+00:19:18 INFO  : Disconnected from the channel tcfchan#55.
+00:19:19 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:19:19 INFO  : Jtag cable 'Xilinx PYNQ-Z1 003017A6E375A' is selected.
+00:19:19 INFO  : 'jtag frequency' command is executed.
+00:19:19 INFO  : Sourcing of 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/ps7_init.tcl' is done.
+00:19:19 INFO  : Context for 'APU' is selected.
+00:19:19 INFO  : System reset is completed.
+00:19:22 INFO  : 'after 3000' command is executed.
+00:19:22 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A" && level==0} -index 1' command is executed.
+00:19:24 INFO  : FPGA configured successfully with bitstream "C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/top.bit"
+00:19:25 INFO  : Context for 'APU' is selected.
+00:19:26 INFO  : Hardware design information is loaded from 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/system.hdf'.
+00:19:26 INFO  : 'configparams force-mem-access 1' command is executed.
+00:19:26 INFO  : Context for 'APU' is selected.
+00:19:27 INFO  : 'ps7_init' command is executed.
+00:19:27 INFO  : 'ps7_post_config' command is executed.
+00:19:27 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:19:28 INFO  : The application 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Embedded_Exercise_normal/Debug/Embedded_Exercise_normal.elf' is downloaded to processor 'ps7_cortexa9_0'.
+00:19:28 INFO  : 'configparams force-mem-access 0' command is executed.
+00:19:28 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A" && level==0} -index 1
+fpga -file C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/top.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+loadhw -hw C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+dow C:/Users/MattiTuomela/software/Josuoikea/Sulari/Embedded_Exercise_normal/Debug/Embedded_Exercise_normal.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+00:19:28 INFO  : Memory regions updated for context APU
+00:19:28 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:19:28 INFO  : 'con' command is executed.
+00:19:28 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+con
+----------------End of Script----------------
+
+00:19:28 INFO  : Launch script is exported to file 'C:\Users\MattiTuomela\software\Josuoikea\Sulari\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_embedded_exercise_normal.elf_on_local.tcl'
+00:41:47 INFO  : Disconnected from the channel tcfchan#56.
+00:41:48 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:42:06 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+00:42:16 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:42:17 INFO  : Jtag cable 'Xilinx PYNQ-Z1 003017A6E375A' is selected.
+00:42:17 INFO  : 'jtag frequency' command is executed.
+00:42:17 INFO  : Sourcing of 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/ps7_init.tcl' is done.
+00:42:17 INFO  : Context for 'APU' is selected.
+00:42:17 INFO  : System reset is completed.
+00:42:20 INFO  : 'after 3000' command is executed.
+00:42:20 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A" && level==0} -index 1' command is executed.
+00:42:22 INFO  : FPGA configured successfully with bitstream "C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/top.bit"
+00:42:22 INFO  : Context for 'APU' is selected.
+00:42:25 INFO  : Hardware design information is loaded from 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/system.hdf'.
+00:42:25 INFO  : 'configparams force-mem-access 1' command is executed.
+00:42:25 INFO  : Context for 'APU' is selected.
+00:42:25 INFO  : 'ps7_init' command is executed.
+00:42:25 INFO  : 'ps7_post_config' command is executed.
+00:42:25 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:42:25 INFO  : The application 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Embedded_Exercise_normal/Debug/Embedded_Exercise_normal.elf' is downloaded to processor 'ps7_cortexa9_0'.
+00:42:25 INFO  : 'configparams force-mem-access 0' command is executed.
+00:42:25 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A" && level==0} -index 1
+fpga -file C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/top.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+loadhw -hw C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+dow C:/Users/MattiTuomela/software/Josuoikea/Sulari/Embedded_Exercise_normal/Debug/Embedded_Exercise_normal.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+00:42:25 INFO  : Memory regions updated for context APU
+00:42:26 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:42:26 INFO  : 'con' command is executed.
+00:42:26 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+con
+----------------End of Script----------------
+
+00:42:26 INFO  : Launch script is exported to file 'C:\Users\MattiTuomela\software\Josuoikea\Sulari\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_embedded_exercise_normal.elf_on_local.tcl'
+00:45:14 INFO  : Disconnected from the channel tcfchan#57.
+00:45:15 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:45:16 INFO  : Jtag cable 'Xilinx PYNQ-Z1 003017A6E375A' is selected.
+00:45:16 INFO  : 'jtag frequency' command is executed.
+00:45:16 INFO  : Sourcing of 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/ps7_init.tcl' is done.
+00:45:16 INFO  : Context for 'APU' is selected.
+00:45:16 INFO  : System reset is completed.
+00:45:19 INFO  : 'after 3000' command is executed.
+00:45:19 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A" && level==0} -index 1' command is executed.
+00:45:21 INFO  : FPGA configured successfully with bitstream "C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/top.bit"
+00:45:21 INFO  : Context for 'APU' is selected.
+00:45:24 INFO  : Hardware design information is loaded from 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/system.hdf'.
+00:45:24 INFO  : 'configparams force-mem-access 1' command is executed.
+00:45:24 INFO  : Context for 'APU' is selected.
+00:45:25 INFO  : 'ps7_init' command is executed.
+00:45:25 INFO  : 'ps7_post_config' command is executed.
+00:45:25 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:45:25 INFO  : The application 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Embedded_Exercise_normal/Debug/Embedded_Exercise_normal.elf' is downloaded to processor 'ps7_cortexa9_0'.
+00:45:25 INFO  : 'configparams force-mem-access 0' command is executed.
+00:45:25 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A" && level==0} -index 1
+fpga -file C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/top.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+loadhw -hw C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+dow C:/Users/MattiTuomela/software/Josuoikea/Sulari/Embedded_Exercise_normal/Debug/Embedded_Exercise_normal.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+00:45:25 INFO  : Memory regions updated for context APU
+00:45:26 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:45:26 INFO  : 'con' command is executed.
+00:45:26 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+con
+----------------End of Script----------------
+
+00:45:26 INFO  : Launch script is exported to file 'C:\Users\MattiTuomela\software\Josuoikea\Sulari\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_embedded_exercise_normal.elf_on_local.tcl'
+00:46:19 INFO  : Disconnected from the channel tcfchan#58.
+00:46:20 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:46:21 INFO  : Jtag cable 'Xilinx PYNQ-Z1 003017A6E375A' is selected.
+00:46:21 INFO  : 'jtag frequency' command is executed.
+00:46:21 INFO  : Sourcing of 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/ps7_init.tcl' is done.
+00:46:21 INFO  : Context for 'APU' is selected.
+00:46:21 INFO  : System reset is completed.
+00:46:24 INFO  : 'after 3000' command is executed.
+00:46:24 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A" && level==0} -index 1' command is executed.
+00:46:26 INFO  : FPGA configured successfully with bitstream "C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/top.bit"
+00:46:26 INFO  : Context for 'APU' is selected.
+00:46:29 INFO  : Hardware design information is loaded from 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/system.hdf'.
+00:46:29 INFO  : 'configparams force-mem-access 1' command is executed.
+00:46:29 INFO  : Context for 'APU' is selected.
+00:46:30 INFO  : 'ps7_init' command is executed.
+00:46:30 INFO  : 'ps7_post_config' command is executed.
+00:46:30 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:46:30 INFO  : The application 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Embedded_Exercise_normal/Debug/Embedded_Exercise_normal.elf' is downloaded to processor 'ps7_cortexa9_0'.
+00:46:30 INFO  : 'configparams force-mem-access 0' command is executed.
+00:46:30 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A" && level==0} -index 1
+fpga -file C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/top.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+loadhw -hw C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+dow C:/Users/MattiTuomela/software/Josuoikea/Sulari/Embedded_Exercise_normal/Debug/Embedded_Exercise_normal.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+00:46:30 INFO  : Memory regions updated for context APU
+00:46:30 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:46:30 INFO  : 'con' command is executed.
+00:46:30 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+con
+----------------End of Script----------------
+
+00:46:30 INFO  : Launch script is exported to file 'C:\Users\MattiTuomela\software\Josuoikea\Sulari\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_embedded_exercise_normal.elf_on_local.tcl'
+00:53:11 INFO  : Disconnected from the channel tcfchan#59.
+00:53:12 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:53:12 INFO  : Jtag cable 'Xilinx PYNQ-Z1 003017A6E375A' is selected.
+00:53:12 INFO  : 'jtag frequency' command is executed.
+00:53:12 INFO  : Sourcing of 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/ps7_init.tcl' is done.
+00:53:13 INFO  : Context for 'APU' is selected.
+00:53:13 INFO  : System reset is completed.
+00:53:16 INFO  : 'after 3000' command is executed.
+00:53:16 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A" && level==0} -index 1' command is executed.
+00:53:18 INFO  : FPGA configured successfully with bitstream "C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/top.bit"
+00:53:18 INFO  : Context for 'APU' is selected.
+00:53:21 INFO  : Hardware design information is loaded from 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/system.hdf'.
+00:53:21 INFO  : 'configparams force-mem-access 1' command is executed.
+00:53:21 INFO  : Context for 'APU' is selected.
+00:53:22 INFO  : 'ps7_init' command is executed.
+00:53:22 INFO  : 'ps7_post_config' command is executed.
+00:53:22 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:53:22 INFO  : The application 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Embedded_Exercise_normal/Debug/Embedded_Exercise_normal.elf' is downloaded to processor 'ps7_cortexa9_0'.
+00:53:22 INFO  : 'configparams force-mem-access 0' command is executed.
+00:53:22 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A" && level==0} -index 1
+fpga -file C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/top.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+loadhw -hw C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+dow C:/Users/MattiTuomela/software/Josuoikea/Sulari/Embedded_Exercise_normal/Debug/Embedded_Exercise_normal.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+00:53:22 INFO  : Memory regions updated for context APU
+00:53:23 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:53:23 INFO  : 'con' command is executed.
+00:53:23 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+con
+----------------End of Script----------------
+
+00:53:23 INFO  : Launch script is exported to file 'C:\Users\MattiTuomela\software\Josuoikea\Sulari\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_embedded_exercise_normal.elf_on_local.tcl'
+11:34:59 INFO  : Disconnected from the channel tcfchan#60.
+11:35:00 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:35:00 INFO  : Jtag cable 'Xilinx PYNQ-Z1 003017A6E375A' is selected.
+11:35:00 INFO  : 'jtag frequency' command is executed.
+11:35:00 INFO  : Sourcing of 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/ps7_init.tcl' is done.
+11:35:01 INFO  : Context for 'APU' is selected.
+11:35:01 INFO  : System reset is completed.
+11:35:04 INFO  : 'after 3000' command is executed.
+11:35:04 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A" && level==0} -index 1' command is executed.
+11:35:06 INFO  : FPGA configured successfully with bitstream "C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/top.bit"
+11:35:06 INFO  : Context for 'APU' is selected.
+11:35:09 INFO  : Hardware design information is loaded from 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/system.hdf'.
+11:35:09 INFO  : 'configparams force-mem-access 1' command is executed.
+11:35:09 INFO  : Context for 'APU' is selected.
+11:35:10 INFO  : 'ps7_init' command is executed.
+11:35:10 INFO  : 'ps7_post_config' command is executed.
+11:35:10 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:35:10 INFO  : The application 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Embedded_Exercise_normal/Debug/Embedded_Exercise_normal.elf' is downloaded to processor 'ps7_cortexa9_0'.
+11:35:10 INFO  : 'configparams force-mem-access 0' command is executed.
+11:35:10 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A" && level==0} -index 1
+fpga -file C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/top.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+loadhw -hw C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+dow C:/Users/MattiTuomela/software/Josuoikea/Sulari/Embedded_Exercise_normal/Debug/Embedded_Exercise_normal.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+11:35:10 INFO  : Memory regions updated for context APU
+11:35:10 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:35:10 INFO  : 'con' command is executed.
+11:35:10 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+con
+----------------End of Script----------------
+
+11:35:10 INFO  : Launch script is exported to file 'C:\Users\MattiTuomela\software\Josuoikea\Sulari\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_embedded_exercise_normal.elf_on_local.tcl'
+14:18:15 INFO  : Apm configuration has been updated and stored to 'C:\Users\MattiTuomela\software\Josuoikea\Sulari\Exercise\apmconfigs\apm_default.json' for the project 'Exercise'
+14:18:19 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A" && level==0} -index 1' command is executed.
+14:18:19 INFO  : 'fpga -state' command is executed.
+14:18:21 INFO  : Memory regions updated for context APU
+14:18:23 ERROR : Failed to start performance analysis programatically. It can be started manually from Performance Session Manager view.
+14:18:26 INFO  : Disconnected from the channel tcfchan#61.
+14:18:27 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:18:27 INFO  : Jtag cable 'Xilinx PYNQ-Z1 003017A6E375A' is selected.
+14:18:27 INFO  : 'jtag frequency' command is executed.
+14:18:27 INFO  : Sourcing of 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/ps7_init.tcl' is done.
+14:18:27 INFO  : Context for 'APU' is selected.
+14:18:27 INFO  : System reset is completed.
+14:18:30 INFO  : 'after 3000' command is executed.
+14:18:30 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A" && level==0} -index 1' command is executed.
+14:18:32 INFO  : FPGA configured successfully with bitstream "C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/top.bit"
+14:18:32 INFO  : Context for 'APU' is selected.
+14:18:34 INFO  : Hardware design information is loaded from 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/system.hdf'.
+14:18:34 INFO  : 'configparams force-mem-access 1' command is executed.
+14:18:34 INFO  : Context for 'APU' is selected.
+14:18:35 INFO  : 'ps7_init' command is executed.
+14:18:35 INFO  : 'ps7_post_config' command is executed.
+14:18:35 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:18:35 INFO  : The application 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Embedded_Exercise_normal/Debug/Embedded_Exercise_normal.elf' is downloaded to processor 'ps7_cortexa9_0'.
+14:18:35 INFO  : 'configparams force-mem-access 0' command is executed.
+14:18:35 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A" && level==0} -index 1
+fpga -file C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/top.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+loadhw -hw C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+dow C:/Users/MattiTuomela/software/Josuoikea/Sulari/Embedded_Exercise_normal/Debug/Embedded_Exercise_normal.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+14:18:35 INFO  : Memory regions updated for context APU
+14:18:35 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:18:35 INFO  : 'con' command is executed.
+14:18:35 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+con
+----------------End of Script----------------
+
+14:18:35 INFO  : Launch script is exported to file 'C:\Users\MattiTuomela\software\Josuoikea\Sulari\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_embedded_exercise_normal.elf_on_local.tcl'
+15:50:53 INFO  : Disconnected from the channel tcfchan#62.
+15:50:54 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:50:54 INFO  : Jtag cable 'Xilinx PYNQ-Z1 003017A6E375A' is selected.
+15:50:54 INFO  : 'jtag frequency' command is executed.
+15:50:54 INFO  : Sourcing of 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/ps7_init.tcl' is done.
+15:50:54 INFO  : Context for 'APU' is selected.
+15:50:55 INFO  : System reset is completed.
+15:50:58 INFO  : 'after 3000' command is executed.
+15:50:58 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A" && level==0} -index 1' command is executed.
+15:51:00 INFO  : FPGA configured successfully with bitstream "C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/top.bit"
+15:51:00 INFO  : Context for 'APU' is selected.
+15:51:02 INFO  : Hardware design information is loaded from 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/system.hdf'.
+15:51:02 INFO  : 'configparams force-mem-access 1' command is executed.
+15:51:02 INFO  : Context for 'APU' is selected.
+15:51:03 INFO  : 'ps7_init' command is executed.
+15:51:03 INFO  : 'ps7_post_config' command is executed.
+15:51:03 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:51:03 INFO  : The application 'C:/Users/MattiTuomela/software/Josuoikea/Sulari/Embedded_Exercise_normal/Debug/Embedded_Exercise_normal.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:51:03 INFO  : 'configparams force-mem-access 0' command is executed.
+15:51:03 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A" && level==0} -index 1
+fpga -file C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/top.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+loadhw -hw C:/Users/MattiTuomela/software/Josuoikea/Sulari/Exercise/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+dow C:/Users/MattiTuomela/software/Josuoikea/Sulari/Embedded_Exercise_normal/Debug/Embedded_Exercise_normal.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+15:51:03 INFO  : Memory regions updated for context APU
+15:51:03 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:51:03 INFO  : 'con' command is executed.
+15:51:03 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx PYNQ-Z1 003017A6E375A"} -index 0
+con
+----------------End of Script----------------
+
+15:51:03 INFO  : Launch script is exported to file 'C:\Users\MattiTuomela\software\Josuoikea\Sulari\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_embedded_exercise_normal.elf_on_local.tcl'
+08:30:11 INFO  : Disconnected from the channel tcfchan#63.
+08:30:13 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 

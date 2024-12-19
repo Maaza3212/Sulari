@@ -171,54 +171,32 @@ void setShipPixels(struct Ship* ship, uint8_t posX, uint8_t posY){
     
 
 }
-void rageSwitch(){
-    rageCount = rageCount +1;
-    if(rageCount ==100){
-        pause();
-    }
-}
+
 void pause() {
+    
     if(gameRunning!=4){
-        clearScreen();
         gameRunning=4;
-        uint8_t baseX = 3;
-        uint8_t baseY = 0;
-        uint8_t r= 235;
-        uint8_t g = 52;
-        uint8_t b=222;
-        SetPixel(baseX, baseY, r, g, b);
-        SetPixel(baseX + 1, baseY, r, g, b);
-        SetPixel(baseX + 2, baseY, r, g, b);
-        SetPixel(baseX, baseY + 1, r, g, b);
-        SetPixel(baseX + 2, baseY + 1, r, g, b);
-        SetPixel(baseX, baseY + 2, r, g, b);
-        SetPixel(baseX + 1, baseY + 2, r, g, b);
-        SetPixel(baseX + 2, baseY + 2, r, g, b);
-        r=222;
-        g=192;
-        b=52;
-        SetPixel(baseX, baseY + 3, r, g, b);
-        SetPixel(baseX + 2, baseY + 3, r, g, b);
-        SetPixel(baseX, baseY + 4, r, g, b);
-        SetPixel(baseX + 2, baseY + 4, r, g, b);
-        baseX=baseX+1;
-        SetPixel(baseX-3, baseY + 5, r, g, b);
-        SetPixel(baseX-2, baseY + 5, r, g, b);
-        SetPixel(baseX-1, baseY + 5, r, g, b);
-        SetPixel(baseX + 1, baseY + 5, r, g, b);
-        SetPixel(baseX + 2, baseY + 5, r, g, b);
-        SetPixel(baseX + 3, baseY + 5, r, g, b);
-        SetPixel(baseX - 3, baseY + 6, r, g, b);
-        SetPixel(baseX - 1, baseY + 6, r, g, b);
-        SetPixel(baseX + 1, baseY + 6, r, g, b);
-        SetPixel(baseX + 3, baseY + 6, r, g, b);
-        SetPixel(baseX-3, baseY + 7, r, g, b);
-        SetPixel(baseX-2, baseY + 7, r, g, b);
-        SetPixel(baseX-1, baseY + 7, r, g, b);
-        SetPixel(baseX, baseY + 7, r, g, b);
-        SetPixel(baseX + 1, baseY + 7, r, g, b);
-        SetPixel(baseX + 2, baseY + 7, r, g, b);
-        SetPixel(baseX + 3, baseY + 7, r, g, b);
+        clearScreen();
+        uint8_t greens[8][3] = {
+        {204, 255, 204}, // Lighter to darker shades of green
+        {153, 255, 153},
+        {102, 255, 102},
+        {51, 255, 51},
+        {0, 255, 0},
+        {0, 204, 0},
+        {0, 153, 0},
+        {0, 102, 0}
+        };
+        for(uint8_t x = 0; x<8;x++){
+            
+            for(uint8_t y=0;y<8;y++){
+                uint8_t rando = rand()%8;
+                uint8_t r = greens[rando][0];
+                uint8_t g = greens[rando][1];
+                uint8_t b = greens[rando][2];
+                SetPixel(x,y,r,g,b);
+            }
+        }
     }else{
         clearScreen();
         gameRunning =1;
@@ -507,10 +485,6 @@ void GG() {
 }
 
 void handleGameTick(){
-    if(gameRunning==4){
-        clearScreen();
-        gameRunning=1;
-    }
     if(gameRunning != 1){
         return;
     }

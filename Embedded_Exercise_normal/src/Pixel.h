@@ -106,7 +106,7 @@ void latch();
 void latOn();   // Turn on Lat (Bit 1)
 void latOff();  // Turn off Lat (Bit 1)
 
-void rageSwitch();
+
 void pause();
 void Zero(uint8_t baseX, uint8_t baseY, uint8_t r, uint8_t g, uint8_t b);
 void One(uint8_t baseX, uint8_t baseY, uint8_t r, uint8_t g, uint8_t b);
